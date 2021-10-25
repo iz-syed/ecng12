@@ -1,0 +1,42 @@
+// Global Animation
+.animate {
+    transition: all .2s ease;
+    // top direction animation
+    &-top {
+        top:0;
+
+        &:hover {
+            top: -10px;
+        }
+    }
+
+    // right direction animation
+    &-right {
+        right:0;
+
+        &:hover {
+            right: -10px;
+        }
+    }
+
+    // bottom direction animation
+    &-bottom {
+        bottom:0;
+
+        &:hover {
+            bottom: -10px;
+        }
+    }
+
+    // bottom direction animation
+    &-left {
+        left:0;
+
+        &:hover {
+            left: -10px;
+        }
+    }
+}
+
+// Using example
+// .animate-{top | right | bottom | left}

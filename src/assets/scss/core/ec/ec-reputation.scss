@@ -1,0 +1,531 @@
+.col-half-offset {
+  margin-left: 4.166666667%;
+}
+
+/* ec-reputation */
+
+.col-md-2.col-half-offset.combine-ofset {
+  flex: 0 0 16.6666666667% + 4.166666667%;
+  max-width: 16.6666666667% + 4.166666667%;
+  margin-left: 0;
+}
+
+.bg-gray {
+  --eC-color: #e9ecef;
+  background-color:var(--eC-color);
+}
+
+.progress-sm {
+  height: 5px;
+}
+
+.icon-circle {
+  width: 30px;
+  height: 30px;
+}
+
+// .reputation {
+  // &-l {}
+
+  // &-r {
+  //   .savedFilters {
+  //     // border:1px solid var(--eC-primary);
+  //   }
+  // }
+// }
+
+@include media-breakpoint-down(md) {
+  [block-title-sm] {
+    margin-bottom: 1rem !important;
+    padding-bottom: 1rem !important;
+    border-bottom: $border-width solid var(--eC-border-color);
+  }
+
+  [border-0] {
+    border: 0
+  }
+
+  [padding-0] {
+    padding: 0 !important;
+  }
+}
+
+
+// interactionsFilters
+.interactionsFilters {
+  .input-group-text {
+    background-color: var(--eC-white);
+
+    i-feather {
+      svg {
+        position: relative;
+        top: -5px;
+      }
+    }
+  }
+}
+
+.btn-fix {
+  position: relative;
+  padding: 7px 0;
+  top: 5px;
+}
+
+app-reputation-right-section {
+  tag-input .ng2-tag-input .ng2-tags-container {
+    padding-top: 0;
+    padding-bottom: 0
+  }
+
+  .ng2-tag-input__text-input {
+    height: 32px !important;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+}
+
+.reputationBlock {
+  position: relative;
+  pointer-events: none;
+}
+
+.reputationBlock:before {
+  content: "Coming Soon";
+  --eC-color:red;
+  color:var(--eC-color);
+  font-size: 11px;
+  position: absolute;
+  left: 16px;
+  top: 8px;
+}
+
+.reputation-filter {
+  input::placeholder {
+    color: #868facb2 !important;
+  }
+}
+
+  .reputation-summary-image {
+    min-width: 146px;
+    max-width: 146px;
+    max-height: 146px;
+    min-height: 109px;
+    border-radius: 3px;
+    --eC-color:#f1efef;
+    border:1px solid  var(--eC-color);
+  }
+
+  .reputation-noImage {
+    border-color: var(--eC-transparent);
+  }
+
+  app-reputation-filter {
+    .reputation-dd {
+      .dropdown-menu ul {
+        width: 650px;
+        max-height: 265px;
+      }
+
+      .dropdown-menu {
+        padding: 1rem 1.5rem;
+
+        ul {
+          // width: 100%;
+          // max-width: 550px;
+          // max-height: 230px;
+
+          li>.btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .custom-control-input:disabled~.custom-control-label::before {
+      background-color: var(--eC-themecolor);
+    }
+
+    .custom-checkbox .custom-control-input:disabled:checked~.custom-control-label::before {
+      background-color: var(--eC-themecolor);
+    }
+
+    .highlight-filter {
+      color: var(--eC-themecolor) !important;
+    }
+  }
+
+  app-reputation-right-section {
+    .rep-multi-select {
+      width: 100%;
+    }
+  
+    .highlight-filter {
+      color: var(--eC-themecolor) !important;
+    }
+  
+    .saved-filter-name {
+      [data-icon="true"] {
+        // float: right;
+        display: none;
+        color: var(--eC-body-color);
+      }
+  
+      &:hover {
+        background: rgba(var(--eC-black-rgb), 0.03);
+  
+        [data-icon="true"] {
+          display: block;
+          // padding-left: 0.5rem;
+        }
+      }
+    }
+  
+  }
+  .reputation-mention-review-graph {
+    .card {
+      margin-bottom: 0px !important;
+    }
+  }
+
+  app-reputation-tags {
+    .reputation-tags {
+      .custom-control {
+        padding: 1.5px 15px;
+  
+        .custom-control-label {
+          padding-left: 1rem;
+  
+          &:before {
+            left: -.5rem;
+          }
+  
+          // custom-control-label:before
+          &:after {
+            left: -.5rem;
+          }
+  
+          // custom-control-label:after
+        }
+  
+        // custom-control-label
+  
+        [data-icon="true"] {
+          float: right;
+          display: none;
+          color: var(--eC-body-color);
+        }
+  
+        &:hover {
+          background: rgba(var(--eC-black-rgb), 0.03);
+  
+          [data-icon="true"] {
+            display: block;
+            padding-left: 0.5rem;
+          }
+        }
+  
+        //custom-control:hover
+      }
+    }
+  }
+
+  app-reputation-summary {
+    .tags-roles .rep-tag {
+      border: 1px solid var(--eC-gray-200) !important;
+      background: var(--eC-gray-100) !important;
+      border-radius: 3px !important;
+      font-size: 14px !important;
+      color: var(--eC-dark-text) !important;
+      margin: 8px 8px 0 0 !important;
+      display: inline-block !important;
+  
+      span {
+        padding: 5px;
+      }
+    }
+  }
+
+  // .keyword-model .modal-body {
+  //   height: 450px;
+  // }
+
+  app-keyword-settings {
+    .add-new-keyword {
+      padding-top: 10px
+    }
+  
+  
+    .reputation-add-keyword {
+      border-radius: 0.25rem;
+      .keyword-label {
+        margin: 0 4px;
+        // padding: 1.5px 15px;
+  
+        .custom-control-label {
+          padding-left: 1rem;
+  
+          // &:before {
+            // left: -.5rem;
+          // }
+  
+          // custom-control-label:before
+          // &:after {
+            // left: -.5rem;
+          // }
+  
+          // custom-control-label:after
+        }
+  
+        // custom-control-label
+  
+        [data-icon="true"] {
+          float: right;
+          display: none;
+          color: var(--eC-body-color);
+        }
+  
+        &:hover {
+          // background: rgba(var(--eC-black-rgb), 0.03);
+  
+          [data-icon="true"] {
+            display: block;
+            padding-left: 0.5rem;
+          }
+        }
+  
+        //custom-control:hover
+      }
+  
+      //custom-control       
+      .custom-keyword-edit {
+        position: relative;
+        padding-left: 5px;
+  
+        [type="text"] {
+          width: 80%;
+          display: block;
+          border: 0;
+          border-bottom: 1px solid var(--eC-Tropaz);
+        }
+  
+        [data-icon="true"] {
+          position: absolute;
+          top: 0;
+        }
+  
+        .check-icon {
+          right: 30px;
+        }
+  
+        .x-icon {
+          right: 10px;
+        }
+  
+        .check-icon,
+        .x-icon {
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+
+  app-reputation-actions {
+    .highlight {
+      // color :green!important;
+      --eC-color:#14b379;
+      color: var(--eC-color) !important;
+      border-color: var(--eC-transparent);
+      background-color: var(--eC-transparent);
+  
+      &:hover {
+        border-color: var(--eC-transparent);
+        background-color: var(--eC-transparent);
+      }
+    }
+  
+  }
+
+  // .repPopup .modal-content {
+  //   transform: translate(0px, -80px);
+  // }
+
+  .visual-right .visual-schedule-calendar .fc-event.visualShowFull-wrapper.reputationCalenadarListing,
+  .visual-right .visual-schedule-calendar .fc-event.visualShowFull-wrapper.reputationCalenadarListing * {
+    max-height: inherit !important;
+    min-height: inherit !important;
+    height: inherit !important;
+  }
+
+  .notes p {
+    word-wrap: anywhere;
+  }
+
+  .reputation-filter {
+    &.rfRight {
+      button,
+      .custom-select,
+      .ng2-tags-container,
+      .select-toggle,
+      .form-control {     
+        border-radius: 0.25rem !important;
+      }
+    }
+  }
+  
+
+  app-keyword-settings {
+    .showAddKeywordForm {
+      
+      .ng2-tag-input__text-input::placeholder { 
+        color: var(--eC-gray-500) !important;
+        opacity: 1; /* Firefox */
+      }
+    }
+
+    
+    #typeahead-config[type="text"]::placeholder {
+      color: var(--eC-gray-500) !important; /* Chrome, Firefox, Opera, Safari 10.1+ */
+      opacity: 1; /* Firefox */
+    }
+
+    .ng2-tag-input__text-input::placeholder { 
+      color: var(--eC-gray-500) !important;
+      opacity: 1; /* Firefox */
+    }
+  }
+
+  .reputation-r tag-input-form [type="text"]::placeholder{
+    color:var(--eC-gray-500) !important; /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 1; /* Firefox */
+  }
+  
+  
+
+
+  .sentimentBtnsWrap {
+    .btn-sm {
+      padding-top:5px;
+      padding-bottom:5px;
+    }
+  }
+  
+  .reputation-r {
+    .ec-daterange-picker {
+      .custom-select {
+        padding-top:5px;
+        padding-bottom:5px;
+      }
+    }
+  }
+
+  .watermark {
+    --eC-color:#abb1c5;
+    color: var(--eC-color) !important;
+  }
+
+  app-reputation-tags {
+    .custom-tag-edit {
+      position: relative;
+      padding-left: 5px;
+
+      [type="text"] {
+        width: 80%;
+        display: block;
+        border: 0;
+        border-bottom: 1px solid var(--eC-Tropaz);
+
+        [data-theme="dark"] & {
+          background-color: var(--eC-transparent);
+          color: var(--eC-dark-text);
+        }
+      }
+
+      [data-icon="true"] {
+        position: absolute;
+        top: 0;
+      }
+
+      .check-icon {
+        right: 30px;
+      }
+
+      .x-icon {
+        right: 10px;
+      }
+
+      .check-icon,
+      .x-icon {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .reputation-add-keyword {
+    li {
+      border: 0;
+      border-left: 3px solid var(--eC-transparent);
+      padding-left: 5px;
+      
+      a {
+        color: var(--eC-body-color);
+      }
+    
+      &:first-child,
+      &:last-child {
+        border-radius: 0;
+      }
+    
+      &.active,
+      &.hover {
+        background: var(--eC-light);
+        border-left: 3px solid var(--eC-primary);
+    
+        a {
+          color: var(--eC-dark);
+        }
+
+      }
+      .reputationActions {
+        display:none;
+      }
+    
+      &:hover {
+        background: var(--eC-light);
+        border-left: 3px solid var(--eC-primary);
+
+        .reputationActions {
+          display:block;
+        }
+      }      
+
+    }
+    
+}
+
+
+.input-group-country {
+  .ng2-dropdown-menu[_ngcontent-ksb-c194],
+  .ng2-dropdown-menu {
+    max-height:200px !important;
+  }
+}
+
+.input-group-language {
+  .ng2-dropdown-menu[_ngcontent-ksb-c194],
+  .ng2-dropdown-menu {
+    max-height:150px !important;
+  }
+}
+
+.input-group-language-modal,
+.input-group-country-modal {
+  .ng2-dropdown-menu[_ngcontent-ksb-c194],
+  .ng2-dropdown-menu {
+    max-height:300px !important;
+  }
+}

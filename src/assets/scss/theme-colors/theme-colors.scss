@@ -1,0 +1,652 @@
+// Theme colors
+#main-wrapper {
+
+  &[data-layout="vertical"] {
+
+    .topbar,
+    .topbar .navbar-collapse {
+      $skins: (skin1:--eC-skin1, skin2:--eC-skin2, skin3:--eC-skin3, skin4:--eC-skin4, skin5:--eC-skin5, skin6:--eC-skin6, skin7:--eC-skin7);
+      @each $skin in map-keys($skins) {
+        &[data-navbarbg="#{$skin}"] {
+          background:var(map-get($skins, $skin));
+        }
+      }
+
+      &[data-navbarbg="skin6"],
+      &[data-navbarbg="skin7"] {
+        .top-navbar .navbar-header {
+          border-right: 1px solid var(--eC-border-color);
+
+          .navbar-brand {
+            .lite-logo {
+              display: none;
+            }
+
+            .dark-logo {
+              display: inline-block;
+            }
+          }
+        }
+
+        .nav-toggler,
+        .topbartoggler {
+          color: var(--eC-body-color);
+        }
+      }
+
+    }
+
+    /*This is for the sidebar bg*/
+    .left-sidebar {
+
+      &[data-sidebarbg="skin1"] .scroll-sidebar {
+        background: var(--eC-skin1);
+      }
+
+      &[data-sidebarbg="skin2"] .scroll-sidebar {
+        background: var(--eC-skin2);
+      }
+
+      &[data-sidebarbg="skin3"] .scroll-sidebar {
+        background: var(--eC-skin3);
+      }
+
+      &[data-sidebarbg="skin4"] .scroll-sidebar {
+        background: var(--eC-skin4);
+      }
+
+      &[data-sidebarbg="skin5"] .scroll-sidebar {
+        background: var(--eC-skin5);
+      }
+
+      &[data-sidebarbg="skin6"] .scroll-sidebar {
+        background: var(--eC-skin6);
+
+        .sidebar-nav {
+          >ul {
+            >.sidebar-item {
+              >.sidebar-link {
+                color: var(--eC-sidebar-text-dark);
+                border-bottom: 1px solid var(--eC-border-color); 
+
+                &.active,
+                &:hover {
+                  border-right: 3px solid var(--eC-primary);
+                }
+              }
+
+              &:hover {
+                >.sidebar-link {
+                  border-right: 3px solid var(--eC-primary);
+                }
+              }
+            }
+          }
+        }
+      }
+      &[data-sidebarbg="skin7"] .scroll-sidebar {
+        background: var(--eC-skin7);
+
+        .sidebar-nav {
+          >ul {
+            >.sidebar-item {
+              >.sidebar-link {
+                color: var(--eC-sidebar-text-dark);
+                border-bottom: 1px solid var(--eC-border-color); 
+
+                &.active,
+                &:hover {
+                  border-right: 3px solid var(--eC-primary);
+                }
+              }
+
+              &:hover {
+                >.sidebar-link {
+                  border-right: 3px solid var(--eC-primary);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // font colors
+  header {
+    &[data-navbarbg="skin6"],
+    &[data-navbarbg="skin7"] {
+
+      // &[data-font="font-1"] {
+        //  default color
+      // }
+
+      &[data-font="font-2"] {
+        .navbar {
+          .navbar-header {
+            a {
+              span.dark-logo {
+                color: var(--eC-font-2) !important;
+              }
+            }
+          }
+  
+          ul.navbar-nav > {
+            li.nav-item {
+              .nav-link {
+                color:var(--eC-font-2);
+              }
+            }
+          }
+          ul.icon-nav {
+            li {
+              a.nav-link {
+                color:var(--eC-font-2);
+              }
+            }
+          }
+        }
+      }
+      
+      &[data-font="font-3"] {
+        .navbar {
+          .navbar-header {
+            a {
+              span.dark-logo {
+                color: var(--eC-font-3) !important;
+              }
+            }
+          }
+  
+          ul.navbar-nav > {
+            li.nav-item {
+              .nav-link {
+                color:var(--eC-font-3);
+              }
+            }
+          }
+          ul.icon-nav {
+            li {
+              a.nav-link {
+                color:var(--eC-font-3);
+              }
+            }
+          }
+        }
+      }
+
+      &[data-font="font-4"] {
+        .navbar {
+          .navbar-header {
+            a {
+              span.dark-logo {
+                color: var(--eC-font-4) !important;
+              }
+            }
+          }
+  
+          ul.navbar-nav > {
+            li.nav-item {
+              .nav-link {
+                color:var(--eC-font-4);
+              }
+            }
+          }
+          ul.icon-nav {
+            li {
+              a.nav-link {
+                color:var(--eC-font-4);
+              }
+            }
+          }
+        }
+      }
+
+      &[data-font="font-5"] {
+        .navbar {
+          .navbar-header {
+            a {
+              span.dark-logo {
+                color: var(--eC-font-5) !important;
+              }
+            }
+          }
+  
+          ul.navbar-nav > {
+            li.nav-item {
+              .nav-link {
+                color:var(--eC-font-5);
+              }
+            }
+          }
+          ul.icon-nav {
+            li {
+              a.nav-link {
+                color:var(--eC-font-5);
+              }
+            }
+          }
+        }
+      }
+
+      &[data-font="font-6"] {
+        .navbar {
+          .navbar-header {
+            a {
+              span.dark-logo {
+                color: var(--eC-font-6) !important;
+              }
+            }
+          }
+  
+          ul.navbar-nav > {
+            li.nav-item {
+              .nav-link {
+                color:var(--eC-font-6);
+              }
+            }
+          }
+          ul.icon-nav {
+            li {
+              a.nav-link {
+                color:var(--eC-font-6);
+              }
+            }
+          }
+        }
+      }
+
+      &[data-font="font-7"] {
+        .navbar {
+          .navbar-header {
+            a {
+              span.dark-logo {
+                color: var(--eC-font-7) !important;
+              }
+            }
+          }
+  
+          ul.navbar-nav > {
+            li.nav-item {
+              .nav-link {
+                color:var(--eC-font-7);
+              }
+            }
+          }
+          ul.icon-nav {
+            li {
+              a.nav-link {
+                color:var(--eC-font-7);
+              }
+            }
+          }
+        }
+      }
+    }    
+  }
+
+
+
+  aside.left-sidebar {
+    &[data-sidebarbg="skin6"],
+    &[data-sidebarbg="skin7"] {
+
+      // &[data-font="font-1"] {
+        // .scroll-sidebar .sidebar-nav > ul > .sidebar-item > .sidebar-link {
+          // Default color
+        // }
+      // }
+
+      &[data-font="font-2"] {
+        .scroll-sidebar .sidebar-nav > ul > .sidebar-item > .sidebar-link {
+          color:var(--eC-font-2);
+        }
+      }
+
+      &[data-font="font-3"] {
+        .scroll-sidebar .sidebar-nav > ul > .sidebar-item > .sidebar-link {
+          color:var(--eC-font-3);
+        }
+      }
+
+      &[data-font="font-4"] {
+        .scroll-sidebar .sidebar-nav > ul > .sidebar-item > .sidebar-link {
+          color:var(--eC-font-4);
+        }
+      }
+
+      &[data-font="font-5"] {
+        .scroll-sidebar .sidebar-nav > ul > .sidebar-item > .sidebar-link {
+          color:var(--eC-font-5);
+        }
+      }
+
+      &[data-font="font-6"] {
+        .scroll-sidebar .sidebar-nav > ul > .sidebar-item > .sidebar-link {
+          color:var(--eC-font-6);
+        }
+      }
+
+      &[data-font="font-7"] {
+        .scroll-sidebar .sidebar-nav > ul > .sidebar-item > .sidebar-link {
+          color:var(--eC-font-7);
+        }
+      }
+
+    }
+  }
+}
+
+body {
+  &[data-theme="light"] {
+
+  // }
+  // &[data-sidebarbg="skin7"],
+  // &[data-sidebarbg="skin6"],
+  // &[data-navbarbg="skin7"],
+  // &[data-navbarbg="skin6"] {
+
+
+    $colors: (2: --eC-font-2-rgb,   3: --eC-font-3-rgb,  4: --eC-font-4-rgb,  5: --eC-font-5-rgb,  6: --eC-font-6-rgb,  7: --eC-font-7-rgb);
+
+    
+
+    @each $color in map-keys($colors) {
+      &[data-font="font-#{$color}"] {
+        color: rgba(var(map-get($colors, $color)), .7); 
+
+        app-inbox-filter .nav .nav-item a,
+        ngb-tabset .nav .nav-item a {
+          color: rgba(var(map-get($colors, $color)), .7);
+
+          &.highlight {
+            &-highlight-filter {
+              color: rgba(var(map-get($colors, $color)), 1);
+            }
+          }
+
+          &.active {
+            color: rgba(var(map-get($colors, $color)), 1);
+            border-bottom-color: rgba(var(map-get($colors, $color)), 1);
+          }
+        }
+
+
+        .custom-control-input:checked ~ .custom-control-label::before {
+          border-color: rgba(var(map-get($colors, $color)), 1);
+          background-color: rgba(var(map-get($colors, $color)), 1);
+        }
+  
+        .text-muted,
+        .menuPopOverClass .sidebar-item app-ec-profile > .sidebar-link,
+        .list-group-item a {
+          color:rgba(var(map-get($colors, $color)), .7) !important;
+        }
+  
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+        .select-dd .select-toggle,
+        .schedule-dd a,
+        a.link,
+        a,
+        .visual-schedule-calendar .cal-events .event-detail .title,
+        .visual-schedule-calendar .cal-events .event-profile .time,
+        .post-scheduling .schedule-calendar .calendar .fc-toolbar .fc-state-default,
+        .emojionearea .emojionearea-editor:empty:before,
+        app-streams .list-group-item.active,
+        .btn-outline-secondary,
+        .dropdown-item,
+        .form-control,
+        .custom-control-label,
+        .tui-image-editor-container .tui-image-editor-checkbox label > span,
+        .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-button .color-picker-value + label,
+        .tui-image-editor-container .tui-image-editor-submenu .tui-image-editor-button > label,  
+        .tui-image-editor-container .tui-image-editor-range-wrap.tui-image-editor-newline.short label > span
+        {
+          color:rgb(var(map-get($colors, $color)));
+        }
+
+        
+        .btn-primary {
+          // background-color:rgb(var(map-get($colors, $color))) !important;
+          background-color:rgba(var(map-get($colors, $color)), 1) !important;
+          border-color:rgb(var(map-get($colors, $color))) !important;
+        }
+
+       
+
+        .text-dark,
+        .grp-active a,
+        app-inbox-filter .nav .nav-item a.highlight-filter {
+          color:rgba(var(map-get($colors, $color)), 1) !important;
+        }
+  
+        input,  
+        textarea,
+        .form-control {  
+            @include input-placeholder {
+                color: var(map-get($colors, $color));
+            }
+        }
+
+
+        .noUi-target .noUi-base {
+          .noUi-connects .noUi-connect {
+            background-color: var(map-get($colors, $color));
+          }
+          .noUi-handle {
+            border-color:var(map-get($colors, $color));
+          }
+        }
+
+        app-event-summary a {
+          text-decoration: underline;
+        }
+  
+      }
+    }
+
+    // R&D qutoes starts
+    $colorsraw: (2: $font-2,   3: $font-3,  4: $font-4,  5: $font-5,  6: $font-6,  7: $font-7,);
+
+    @each $color in map-keys($colorsraw) {
+      &[data-font="font-#{$color}"] {
+        
+        .tui-image-editor-container .tui-image-editor-range-wrap.tui-image-editor-newline.short label {
+          color:lighten(map-get($colorsraw, $color), 25%); 
+        }
+  
+        .btn-primary {   
+          // background-color:var(map-get($colorsraw, $color)) !important;
+          // border-color:var(map-get($colorsraw, $color)) !important;
+          &:hover {
+            background-color:darken(map-get($colorsraw, $color), 10%) !important;
+          }
+        }
+
+        app-select-profile .active a.link,
+        app-inbox-filter .highlight-filter,
+        app-inbox-filter li.active a.link, 
+        app-inbox-filter a.link.active {
+          color:darken(map-get($colorsraw, $color), 30%) !important;
+        }
+      }
+    }
+    // R&D qutoes ends
+
+
+    // post text color
+    @each $color in map-keys($colors) {
+      &[data-font="font-#{$color}"] { 
+        .post-approve-content {
+          color: rgba(var(map-get($colors, $color)), 1); 
+        } 
+      }
+    }
+
+  }
+  
+}
+
+// body {
+//   &[data-font="font-3"] {
+//     color:rgba($font-3, .7);
+
+//     .text-muted,
+//     .menuPopOverClass .sidebar-item app-ec-profile > .sidebar-link {
+//       color:rgba($font-3, .7) !important;
+//     }
+
+//     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+//     .select-dd .select-toggle,
+//     .text-dark,
+//     .schedule-dd a,
+//     a.link,
+//     a,
+//     .visual-schedule-calendar .cal-events .event-detail .title,
+//     .visual-schedule-calendar .cal-events .event-profile .time,
+//     .post-scheduling .schedule-calendar .calendar .fc-toolbar .fc-state-default,
+//     .btn-outline-secondary,
+//     .dropdown-item,
+//     .form-control {
+//       color:var(--eC-font-3) !important;
+//     }
+
+//     .btn-primary {
+//       background-color:var(--eC-font-3) !important;
+//       border-color:var(--eC-font-3) !important;
+
+//       &:hover {
+//         background-color:darken($font-3, 10%) !important;
+//         // border-color:var(--eC-font-3) !important;
+//       }
+//     }
+
+//     input,  
+//     textarea,
+//     .form-control {  
+//         @include input-placeholder {
+//             color: var(--eC-font-3);
+//         }
+//     }
+//   }
+// }
+
+#main-wrapper {
+  &[data-layout="vertical"] {
+    &[data-theme="dark"] {
+      // border:10px solid red;
+
+      // &[data-font="font-1"] .navbar .navbar-header a span.dark-logo,
+      // &[data-font="font-2"] .navbar .navbar-header a span.dark-logo,
+      // &[data-font="font-3"] .navbar .navbar-header a span.dark-logo,
+      // &[data-font="font-4"] .navbar .navbar-header a span.dark-logo,
+      // &[data-font="font-5"] .navbar .navbar-header a span.dark-logo,
+      // &[data-font="font-6"] .navbar .navbar-header a span.dark-logo,
+      // &[data-font="font-7"] .navbar .navbar-header a span.dark-logo {
+      //   color:var(--eC-font-1) !important;
+      // }
+
+      
+      header[data-font=font-1] .navbar ul.icon-nav li a.nav-link,
+      header[data-font=font-2] .navbar ul.icon-nav li a.nav-link,
+      header[data-font=font-3] .navbar ul.icon-nav li a.nav-link,
+      header[data-font=font-4] .navbar ul.icon-nav li a.nav-link,
+      header[data-font=font-5] .navbar ul.icon-nav li a.nav-link,
+      header[data-font=font-6] .navbar ul.icon-nav li a.nav-link,
+      header[data-font=font-7] .navbar ul.icon-nav li a.nav-link {
+        color:var(--eC-font-1);
+      }
+
+      // header[data-font=font-1] .navbar .navbar-header a span.dark-logo,
+      header[data-font=font-2] .navbar .navbar-header a span.dark-logo,
+      header[data-font=font-3] .navbar .navbar-header a span.dark-logo,
+      header[data-font=font-4] .navbar .navbar-header a span.dark-logo,
+      header[data-font=font-5] .navbar .navbar-header a span.dark-logo,
+      header[data-font=font-6] .navbar .navbar-header a span.dark-logo,
+      header[data-font=font-7] .navbar .navbar-header a span.dark-logo {
+        color:var(--eC-white) !important;
+      }
+      
+    }
+  }
+}
+
+$fontColor:(
+ font-3: --eC-font-3,
+ font-4: --eC-font-4,
+ font-5: --eC-font-5,
+ font-6: --eC-font-6,
+ font-7: --eC-font-7
+);
+
+body[data-theme="light"] {
+  @each $color-name, $color-value in $fontColor {
+      &[data-font="#{$color-name}"] {
+          
+        .calendar {
+          .fc-view-container {
+            .bg-info {
+              background-color:var(#{$color-value}) !important;
+            }
+          }
+        } // Calendar
+
+        .post-scheduling .schedule-calendar .calendar .fc-toolbar .fc-button-group .fc-state-active {
+          border-color:var(#{$color-value}) !important;
+        }
+
+        .vis-cal-witch-tab.active,
+        ec-schedule .schdd .btn-primary,
+        .queue-listing .queue.active,
+        .queue-listing .queue:hover,
+        .border-primary {
+          border-color:var(#{$color-value}) !important;
+        }
+
+        .scroll-sidebar .sidebar-nav > ul > .sidebar-item:hover > .sidebar-link,
+        .scroll-sidebar .sidebar-nav > ul > .sidebar-item > .sidebar-link.active {
+          border-right-color:var(#{$color-value}) !important;
+        }
+
+        .messages .comments .social-comment.active,
+        app-feed-comment-listing .post-comments.active,
+        .feed .feed-sidebar .list-group .list-group-item.active,
+        .feed .feed-sidebar .list-group .list-group-item:hover {
+          border-left-color:var(#{$color-value}) !important;
+        }
+
+        .upload-btn-wrapper .upload-btn,
+        ec-schedule .schdd .btn-primary,
+        .ngb-dp-day .bg-primary {
+          background-color:var(#{$color-value}) !important;
+        }
+
+        .ngb-dp-weekday {
+          color:var(#{$color-value});
+        }
+      }   
+  }
+}
+
+
+
+// $fontColorRGB:(
+//  font-3: --eC-font-3-rgb,
+//  font-4: --eC-font-4-rgb,
+//  font-5: --eC-font-5-rgb,
+//  font-6: --eC-font-6-rgb,
+//  font-7: --eC-font-7-rgb
+// );
+
+
+// body {
+//   @each $c-n, $c-v in $fontColorRGB {
+//       &[data-font="#{$c-n}"] { 
+
+//         .queue-listing .queue:hover {
+//           border-color:rgba(var(#{$c-v}), 1 !important);
+//         }
+
+//       }
+//     }
+//   }

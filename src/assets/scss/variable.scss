@@ -1,0 +1,309 @@
+@import 'fonts.scss';
+
+/* Theme Colors */
+$themecolor: #2962FF;
+
+$skin1:$themecolor;
+$skin2:#fe5419;
+$skin3:#00b0ff;
+$skin4:#6659f7;
+$skin5:#414755;
+$skin6:#fff;
+$skin7:#e6ebf5;
+
+/* Dark Theme Colors */
+$dark-primary: #151319; // header // sidebar
+$dark-secondary: #1b1c21; // body bg
+$dark-100: #14151a;
+$dark-50: #22222a;
+$dark-25: #282830;
+$dark-border: #232329;
+$dark-text: #868fac; // global text
+
+/* Topbar Colors */
+$topbar: #fff;
+$topbar-height: 70px;
+$topbar-navlink-padding: 0px 15px;
+$topbar-navlink-font-size: 1rem;
+$topbar-navlink-height: 70px;
+$topbar-navbrand-padding: 0 10px 0 10px;
+
+/* Sidebar Colors */
+$sidebar-text-dark: #868fac;
+$sidebar-text: #fff;
+
+$sidebar-width-full: 250px;
+$sidebar-width-iconbar: 180px;
+$sidebar-width-mini: 80px;
+
+/* Boxed layout width */
+$boxed-width:1200px;
+
+/* Shadow */
+$shadow:1px 0px 20px rgba(0,
+  0,
+  0,
+  0.08);
+
+/* transitions */
+$transitions:0.2s ease-in;
+
+/* Dark transparent bg */
+$transparent-dark-bg:rgba(0,
+  0,
+  0,
+  0.05);
+
+%square {
+  border-radius: 0px
+}
+
+%rotate45 {
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+
+$login-bg: url('../images/big/auth-bg.jpg');
+
+/**
+ * Table Of Content
+ *
+ *  1. Color system
+ *  2. Options
+ *  3. Body
+ *  4. Typography
+ *  5. Breadcrumbs
+ *  6. Cards
+ *  7. Dropdowns
+ *  8. Buttons
+ *  9. Typography
+ *  10. Progress bars
+ *  11. Tables
+ *  12. Forms
+ *  14. Component
+ */
+
+//
+// Color system
+//
+$white: #fff !default;
+$gray-100: #f9fbfd !default;
+$gray-200: #d2dae6 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #bec4d6 !default;
+$gray-500: #a1aab2 !default;
+$gray-600: #6c757d !default;
+$gray-700: #4F5467 !default;
+$gray-800: #343a40 !default;
+$gray-900: #2c3140 !default;
+$black: #000 !default;
+$gray-primary: #b6bdd1 !default;
+
+$blue: #4d7cfe !default;
+$indigo: #6610f2 !default;
+$purple: #7460ee !default;
+$pink: #e83e8c !default;
+$red: #fe4f4a !default;
+$orange: #fb8c00 !default;
+$yellow: #ffbc34 !default;
+$green: #3fcb98 !default;
+$teal: #20c997 !default;
+$cyan: #4fc3f7 !default;
+$text-muted: $gray-500 !default;
+$success-light: #ebfaf4;
+$primary-light: #edf2ff;
+$warning-light: #fff8e5;
+$danger-light: #ffeded;
+$danger-soft: #ea4b47ab;
+
+$persian-indigo:#3C1687;
+$cardinal:#AF1B34;
+$axolotl:#4E6649;
+$golden-fizz:#E5FF30;
+$selective-yellow: #ffb900;
+$picton-blue : #3897F0;
+$mercury : #E7E7E7;
+$dusty-gray: #999;
+
+// Social bgs
+$facebook: #0074fa;
+$twitter: #1da1f2;
+$instagaram-primary: #fdf497;
+$instagaram-secondary: #fd5949;
+$instagaram-tertiary: #d6249f;
+$instagaram-quaternary: #285AEB;
+$google-my-business: #739dff;
+$linked-in: #0077b5;
+$pinterest: #e60023;
+$google-analytics: #f9ab19;
+$youtube:#ff0000;
+$blogger:#f79138;
+
+
+$colors: (blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-600,
+  gray-dark: $gray-800);
+
+$primary: $blue !default;
+$secondary: $gray-200 !default;
+$success: $green !default;
+$info: $blue !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+$cyan: $cyan !default;
+$orange: $orange !default;
+$theme-colors: () !default;
+$theme-colors: map-merge(("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "cyan": $cyan,
+    "orange": $orange,
+    "purple": $purple,
+    "success-light": $success-light,
+    "primary-light": $primary-light,
+    "warning-light": $warning-light,
+    "danger-light": $danger-light,
+    "danger-soft": $danger-soft),
+  $theme-colors);
+
+// Body
+$main-body-bg: #f9fbfd !default;
+$body-bg: #f9fbfd;
+$body-color: #868fac !default;
+
+// Font, line-height, and color for body text, headings, and more.
+$font-size-base: 1rem;
+$font-family-sans-serif: 'ProximaNova-Regular',
+sans-serif !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 600 !default;
+$font-weight-bold: 800 !default;
+
+$h1-font-size: 36px !default;
+$h2-font-size: 30px !default;
+$h3-font-size: 24px !default;
+$h4-font-size: 18px !default;
+$h5-font-size: 16px !default;
+$h6-font-size: 14px !default;
+
+// $headings-margin-bottom: (1rem / 2) !default;
+$headings-font-family: 'ProximaNova-Semibold',
+sans-serif !default;
+$headings-font-weight: 700 !default;
+$headings-color: $dark !default;
+
+$grid-gutter-width: 20px !default;
+
+// Components
+$component-active-color: $white !default;
+$component-active-bg: $themecolor !default;
+$badge-pill-padding-x: .2em !default;
+$badge-pill-padding-y: 1em !default;
+
+// Border
+$border-width: 1px !default;
+$border-color: $gray-200 !default;
+$border-radius: 5px !default;
+
+// Input
+$input-color: $body-color !default;
+$input-border-color: $border-color !default;
+$input-border-radius: 3px !default;
+$input-focus-box-shadow: none !default;
+
+// Custom Control
+$custom-select-indicator: url('/../images/custom-select.png') !default;
+$custom-select-indicator-1: url('/../images/custom-select-1.png') !default;
+$custom-select-indicator: str-replace(url(""), "%23") !default;
+$custom-checkbox-indicator-border-radius: 3px !default;
+$custom-control-indicator-border-color: $border-color !default;
+$custom-select-focus-box-shadow: none !default;
+
+// Buttons
+$btn-border-radius: 3px !default;
+$btn-padding-y: .75rem !default;
+$btn-padding-x: 1rem !default;
+$btn-box-shadow: inset 0 1px 0 rgba($white, .15),
+0 1px 1px rgba($black, .075) !default;
+$btn-focus-box-shadow:none;
+$btn-active-box-shadow:none;
+$btn-focus-width:none;
+
+// Navbar
+$navbar-light-color: $body-color !default;
+$navbar-light-hover-color: $dark !default;
+$navbar-light-active-color: $dark !default;
+
+// Dropdown
+$dropdown-min-width: 270px !default;
+$dropdown-padding-y: 15px !default;
+$dropdown-item-padding-y: .6rem !default;
+$dropdown-link-color: $body-color !default;
+$dropdown-link-active-color: $dark !default;
+$dropdown-link-active-bg: $gray-100 !default;
+
+// Cards
+$card-cap-bg: rgba(9, 63, 115, .03) !default;
+
+// qube value
+$qube:50px;
+$eC-col:1%;
+// $important: !important;
+
+// Data Font Colors
+
+$font-1: $dark-text;
+$font-2: $skin5;
+$font-3: $blue; 
+$font-4: $red;
+$font-5: $cardinal;
+$font-6:$skin2;
+$font-7:$skin4;
+
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+app-analytics-overview {
+  h1, .h1 {
+    font-size: 2.0rem;
+  }
+}
+
+$electric-lime  : #CDE000;
+$azure-radiance : #00A5F9;
+$green-apple    : #32C12C;
+$silver-chalice : #9E9E9E;
+$guardsman-red  : #D40C00;
+$fuchsia-blue   : #7f4FC9;
+$gallery-gray   : #EEEEEE;
+
+$chambray       : #3b5998;
+$storm-gray     : #6B7185;
+$Tropaz         : #2A5E8E;
+$transparent    : transparent;

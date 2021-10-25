@@ -1,0 +1,39 @@
+ngb-modal-window {
+  &:not(.hugeModal) { // default position
+    .modal-dialog {
+      top:58px;
+    }
+  }
+
+  &.hugeModal.app-dashboard-report-editor {
+    .modal-dialog {
+      top:33px;
+    }
+  }
+
+  &.hugeModal.app-custom-report-editor {
+    .modal-dialog {
+      top:33px;
+    }
+  }
+
+  &.hugeModal.app-manage-accounts {
+    .modal-dialog {
+      top:33px;
+    }
+  }
+
+  &.app-campaign-tagging-post-editor {
+    .modal-dialog {
+      top:0px;
+    }
+  }
+}
+
+// Modal + Modal
+
+.postApprovalFrame  {
+  .modal-dialog {
+    left: -8px !important;
+  }
+}

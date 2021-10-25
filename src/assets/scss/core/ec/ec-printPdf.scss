@@ -1,0 +1,290 @@
+
+app-pdf ,
+app-custom-report,
+app-competitors-report,
+app-analytics-comparison {
+  @media print {
+
+    app-top-posts[grid-id="toPost-grid"] {
+      .card {
+        margin-bottom:10px !important
+      }
+    }
+
+    .fixed-header {
+        position: relative;
+        width: 100%;
+        min-height: 40px;
+      
+        &:before {
+          display:none;
+        }
+        .fixed-header-content {
+          width: 91.100%;
+          background: tranaparent;
+          padding-top: 30px;
+          @include media-breakpoint-up(md) {
+            position: static;
+          } 
+        }
+      } // fixed-header
+      a:not(.btn) {
+        text-decoration:inherit;
+      }
+      .chartjs-render-monitor {
+        max-width:100%;
+      }
+      app-ec-country-chart svg  {
+        zoom:75%;
+        max-width:550px;
+        transform: scale(1);
+        margin-left:35px;
+        margin-top: 55px
+      }
+    
+      app-ec-donut-chart svg {
+        zoom:100%;
+        max-width:550px;
+        transform: scale(1);
+    }
+
+    
+    app-ec-country-chart.fs svg,
+    app-ec-donut-chart.fs svg {
+      max-width:inherit;
+    }
+    
+
+    .table {
+      th,
+      td {
+        padding:.25rem;
+        font-size:14px;
+      }
+    }
+    app-top-post-message {
+      div {
+        max-width:280px;
+        img {
+          max-width:30px * 2;
+          max-height:30px * 2;
+        }
+      }
+    }      
+ 
+  } // @media print
+    @media print {
+      .table-bordered {
+        border:1px solid var(--eC-gray-200) !important
+      } 
+    
+      .table-bordered tr th {
+        border:0 !important;
+        border-top:1px solid var(--eC-gray-200) !important;
+        border-right:1px solid var(--eC-gray-200) !important;
+        border-bottom:1px solid var(--eC-gray-200) !important;
+      }
+      
+      
+      .table-bordered tr td {
+        border:0 !important;
+        border-right:1px solid var(--eC-gray-200) !important;
+        border-bottom:1px solid var(--eC-gray-200) !important;
+      
+      } 
+      
+      .table-bordered tr th:last-child,
+      .table-bordered tr td:last-child {
+        border-right:0 !important;
+      }
+      
+      .table-bordered tr:last-child td {
+        border-bottom:0 !important;
+      }
+
+      .print-summary {
+        min-height: 50px;
+      }
+    
+    
+    }
+    .pdfpage {
+      [graph-id]:not(app-ec-line-chart) {
+        margin-bottom: 120px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      // === condition based 
+      &.pl-fhh {
+        [graph-id]:not(app-ec-line-chart) {
+          margin-bottom: 0;
+        }
+      }
+
+      // .pdf-cross-channel-top-info {
+      //   margin-top: 250px;
+      // }
+    } // pdfpage
+
+    app-ec-country-chart[graph-id="InstagramBusinessTotalFollowersByCountry"] .mt-4 {
+      margin-top: .5rem!important;
+      margin-bottom: .5rem!important;
+  }
+    
+}
+
+// app-custom-report {
+//   @media print {
+//     #page1:not(.pl-ft) {
+//       margin-top: 250px;
+//     }
+//   }
+// }
+.pdfpage {
+  position: relative;
+  overflow: hidden;
+  padding-top: 30px;
+  page-break-after: always;
+}
+.pdfpage.landscape {
+  width: 11.7in;
+  height: 8.2in;
+}
+.pdfpage.portrait {
+  width: 8.3in;
+  height: 11.6in;
+}
+
+.fbAdsPdfpage {
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+}
+.fbAdsPdfpage.landscape {
+  width: 11.7in;
+  height: 8.2in;
+}
+.fbAdsPdfpage.portrait {
+  width: 8.3in;
+  height: 11.6in;
+}
+
+
+// app-custom-report {
+//   [graph-id]:last-child .card {
+//     max-height: calc(100% - 50px);
+//   }
+// }
+
+.logoBox {
+  img {
+    max-width:150px;
+    height:auto;
+  }
+}
+
+.welcomeInfo {
+  @extend .parent;
+  // border-radius:50%;
+  // background:var(--eC-gray-300);
+  // box-shadow:0 0 0 10px var(--eC-gray-100), 0 0 0 15px var(--eC-gray-300);
+  width:100%;
+  // max-width:($qube * 15);
+  min-width:($qube * 15);
+  min-height:($qube * 15);
+  margin:55px auto;
+  text-align:center;
+  
+  &-lifter {
+    // @extend .child;  
+    width:100%;
+    max-width:70%;
+  }
+  
+  &_logo {
+    min-width:34px;
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:5px;
+    padding-bottom:5px;
+    
+    // img {
+      // max-width:100px;
+      // height:auto;
+    // }
+  }
+  
+  &_title {
+    &-sub {
+      text-transform:uppercase;
+      font-size:0.9rem;
+      font-weight:bold;
+      color:var(--eC-dark-text);
+    }
+    &-main {
+      // border-top:1px solid var(--eC-gray-400);
+      // border-bottom:1px solid var(--eC-gray-400);
+      padding:15px 0;
+      margin:15px 0;
+      font-weight:bold;
+    }
+    &-info {
+      font-size:1.5rem;
+    }
+  }
+  
+}
+
+// #page {
+//   &-0 {
+//     background:var(--eC-white);
+//   }
+// }
+
+// .export-pdf-page {
+//   #page {
+//       &-0 {
+//         background:var(--eC-white);
+//       }
+//     }
+// }
+
+app-top-post-message {
+  @include clearFix();
+  display:block;
+}
+
+app-top-posts {
+  .ec-sortable-table th.sortable {
+    // padding-right: 5px;
+    font-size: 14px;
+    // padding-left: 5px;
+    }
+}
+
+
+app-top-posts {
+  .ec-sortable-table th.pdfSort {
+    font-size: 10px !important;
+    }
+    .grid-break {
+      page-break-after: always;
+    }
+}
+
+.export-pdf-landscape {
+  .welcomeInfo {
+    min-height:600px
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+}
+canvas {
+    max-width:100% !important;
+    height:auto !important
+}

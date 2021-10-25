@@ -1,0 +1,61 @@
+.chrome_extension {
+  --eC-color-rgb:249, 251, 253;
+  background:rgba(var(--eC-color-rgb), .8);
+
+  // .container {
+  //   max-width: 760px;
+  //   padding-bottom: 5px;
+  // }
+
+  // .post-carousel {
+  //   max-height: 235px;
+  // }
+  // .card {
+  //   margin-bottom: 5px;
+  // }
+
+  // app-select-profile > .mt-4 {
+  //   margin-top: 0 !important;
+  // }
+
+  // .save-buttons {
+  //   &.mt-4 {
+  //     margin-top: 0 !important;
+  //   }
+  //   margin-bottom: 0.5em;
+  // }
+
+  // h4 {
+  //   &.mt-4 {
+  //     margin-top: .5 !important;
+  //     margin-bottom: .5;
+  //   }
+  // }
+
+  // h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  //   margin-bottom: 0;
+  // }
+
+  a.editor_type.active {
+      text-decoration: underline;
+  }
+
+  .ngb-alert-wrapper {
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      right: 0;
+  }
+
+  .emojionearea .emojionearea-button.active+.emojionearea-picker-position-top {
+    margin-top: 0;
+  }
+
+  .modal-header {
+    .dropdown-menu {
+      .dropdown-item {
+        @include text-truncate;
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+// Custom select
+.custom-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  background-size: auto;
+  height: auto;
+
+  &.form-control-sm {
+    height: calc(1.5em + .5rem + 2px);
+    font-size: .875rem;
+    padding: .375rem .5rem;
+  }
+}
+
+.progress {
+  background-color: var(--eC-white);
+}
+
+// scrollbar
+.scrollable {
+  position: relative;
+}
+
+.list-unstyled {
+  >li {
+    padding: 6px 0;
+  }
+}
+
+.modal-header,
+.modal-body {
+  padding: 25px 25px 15px 25px;
+}
+
+@include media-breakpoint-up(lg) {
+  .custom-modal .modal-dialog {
+    max-width: $modal-lg;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .custom-modal .modal-dialog {
+    max-width: $modal-xl;
+  }
+}
+
+// login-register
+
+.auth-wrapper {
+  min-height: 100vh;
+  background-color: #f1f1f1;
+  // background: $login-bg no-repeat center center;
+
+  .auth-box {
+    background: var(--eC-white);
+    box-shadow: var(--eC-shadow);
+    max-width: 400px;
+    margin: 0 0 10% 0;
+
+    &.reset-password,
+    &.email-verification {
+      max-width: inherit;
+
+      @media (min-width: 991px) {
+        min-width: 700px;
+      }
+    }
+  }
+}
+
+.impressionbyage {
+  height: 300px;
+}
+
+.impressionbydays {
+  height: 280px;
+}
+
+.c3-chart {
+  height: 260px;
+  width: 100%;
+}
+
+.c3-chart-arcs-title {
+  font-size: 30px;
+  font-family: 'ProximaNova-Bold', sans-serif;
+}
+
+.followers {
+  position: relative;
+  height: 300px;
+}
+
+.jvectormap-zoomout,
+.jvectormap-zoomin {
+  display: none;
+}
+
+// high charts
+
+.highcharts-credits {
+  display: none;
+}
+
+.highcharts-point {
+  stroke: var(--eC-border-color);
+}
+
+.highcharts-text-outline {
+  fill: var(--eC-transparent);
+  stroke: var(--eC-transparent);
+}
+
+.highcharts-label>text {
+  fill: var(--eC-dark) !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+}
+
+.highcharts-root {
+  font-family: 'ProximaNova-Regular', sans-serif !important;
+}
+
+.fav-camp-add {
+  padding-top: 0.39rem;
+  padding-bottom: 0.39rem;
+}
+
+.custom-campaign-edit {
+  position: relative;
+  padding-left: 5px;
+
+  [type="text"] {
+    width: 80%;
+    display: block;
+    border: 0;
+    border-bottom: 1px solid var(--eC-Tropaz);
+  }
+
+  [data-icon="true"] {
+    position: absolute;
+    top: 0;
+  }
+
+  .check-icon {
+    right: 30px;
+  }
+
+  .x-icon {
+    right: 10px;
+  }
+
+  .check-icon,
+  .x-icon {
+    cursor: pointer;
+  }
+}
+
+.campaign-confirm-delete {
+  position: absolute;
+  width: 100%;
+  background: #e4eef8;
+  z-index: 1;
+  max-height: 27px;
+  top: 6px;
+}

@@ -1,0 +1,127 @@
+// .localSeoGridTab {
+//   .nav-pills {
+//     padding-left:1.5rem;
+//     padding-right:1.5rem;
+//   }
+// }
+
+@include media-breakpoint-up(lg) {
+  .seoTscroll {
+    height: 100vh;
+    max-height: calc(100vh - 300px);
+  }  
+}
+
+.locationGridNoimage {
+  min-width:70px;
+  max-width:70px;
+  height:70px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 3px;
+  border:1px solid $gray-200;
+
+  .noimage {
+    font-size:50px;
+    color:$gray-500 !important;
+  }
+}
+
+.exportDropdown {
+
+  float: right;
+  position: relative;
+  top: -54px;
+  height: 0;
+}
+
+
+#localseoGooglesearch {
+  width:100%;
+  max-width:574px;
+  max-height:350px;
+  overflow-y:scroll;
+
+  @media (max-width: 1280px) {
+    max-width:360px;
+  }
+}
+
+.localseo-image-wrapper .overlay {
+  width: 90px !important;
+  height: 90px !important; 
+}
+
+#recentseo-panel .localseo-image-wrapper {
+  margin-left:auto;
+  margin-right:auto;
+  width: 90px;
+  height: 90px;
+}
+
+.app-localseo-report {
+  width:80%;
+  max-width:1400px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.getFoundText {
+  position: absolute;
+  left: 25px;
+  right: 0;
+  margin: auto;
+  top: 60px;
+}
+
+.getPublishSection {
+  position: absolute;
+  left: 155px;
+  right: 0;
+  margin: 0;
+  max-width: 450px;
+
+  input[type="text"] {
+    border:0;
+    border-bottom: 1px solid var(--eC-Tropaz);
+
+    [data-theme="dark"] & {
+      background-color: var(--eC-transparent);
+      color: var(--eC-dark-text);
+    }
+  }
+}
+.landingHeightViewMenu{
+  min-height: calc(98vh - 70px);
+  margin-bottom:0 !important;
+}
+
+.localSeoGridTab .nav-pills li:first-child{margin-left:5px;}
+
+
+ul.list-group {
+  &.comparisonView {
+    .list-group-item {
+      // border:1px solid rgba(0, 0, 0, 0.125);
+      padding: 0.3rem;
+      border:none;
+    }
+  }
+}
+
+@media (min-width:1920px) {
+  .localSearchActions {
+    .lseo {
+      &-gmbl,
+      &-gsearch {
+        max-width:500px;
+      }
+
+      &-sterm {
+        max-width:450px;
+      }
+    }
+  }
+}

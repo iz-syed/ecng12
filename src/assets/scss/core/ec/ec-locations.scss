@@ -1,0 +1,377 @@
+app-locations-right-section {
+  .location-streamProfile {
+
+    [data-icon="true"] {
+      float: right;
+      display: none;
+      color: $body-color;
+    }
+
+    &:hover {
+      // background: rgba(0, 0, 0, 0.03);
+
+      [data-icon="true"] {
+        display: block;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+app-location-settings {
+  .select-dd .select-toggle {
+    padding: 6px 30px 6px 15px;
+  }
+
+  .location-list {
+    li {
+      border-left: 3px solid transparent;
+
+      a {
+        color: $body-color;
+      }
+
+      .locationActions {
+        display: none;
+      }
+
+      &:hover {
+        background: $light;
+        border-left: 3px solid $primary;
+
+        .locationActions {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+.location-streamProfile {
+  padding-left: 4px;
+  padding-right: 0;
+
+  .custom-checkbox {
+    width: 100%;
+  }
+
+  .post-image {
+    object-fit: cover;
+  }
+}
+
+.locationList {
+  .list-group-item {
+    border: 0;
+    border-left: 3px solid transparent;
+    padding-left: 20px;
+    padding-right: 1rem;
+
+    a {
+      color: $body-color;
+    }
+
+    &:first-child,
+    &:last-child {
+      border-radius: 0;
+    }
+
+    &.active {
+      background: $light;
+      border-left: 3px solid $primary;
+
+      a {
+        color: $dark;
+      }
+    }
+
+    &:hover {
+      border-left: 3px solid $primary;
+      background: $light;
+
+      .post-actions {
+        display: block;
+      }
+    }
+
+    .post-actions {
+      top: 11px;
+      right: 20px;
+      width: 18px;
+    }
+  }
+}
+
+
+.gmbLocation_c {
+
+  //custom-control       
+  .custom-tag-edit {
+    position: relative;
+    // padding-left: 5px;
+
+    [type="text"] {
+      width: 85%;
+      display: block;
+      border: 0;
+      border-bottom: 1px solid $gray-200;
+    }
+
+    [data-icon="true"] {
+      position: absolute;
+      top: 0;
+    }
+
+    .check-icon {
+      right: 30px;
+    }
+
+    .x-icon {
+      right: 10px;
+    }
+
+    .check-icon,
+    .x-icon {
+      cursor: pointer;
+    }
+  }
+
+  //custom-tag-edit
+
+  .hidden {
+    display: none !important;
+  }
+}
+
+.locationWrap {
+  .gmbActions {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover {
+    .gmbActions {
+      opacity: 1;
+      pointer-events: unset;
+    }
+  }
+}
+
+.lbox {
+  // background:blanchedalmond;
+  // max-width: 404px; 
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  width: 100%;
+
+  &--left {
+    box-sizing: content-box;
+    display: block;
+    box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-right: 24px;
+    width: 120px;
+  }
+
+  &--center {
+    color: inherit;
+    box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  &--right {
+    box-sizing: content-box;
+    box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 24px;
+    padding-left: 24px;
+    width: 24px;
+  }
+}
+
+
+// 
+.material-switch>input[type="checkbox"] {
+  display: none;
+}
+
+.material-switch>label {
+  cursor: pointer;
+  height: 0px;
+  position: relative;
+  width: 40px;
+}
+
+.material-switch>label::before {
+  background: rgb(0, 0, 0);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  content: '';
+  height: 16px;
+  margin-top: -8px;
+  position: absolute;
+  opacity: 0.3;
+  transition: all 0.4s ease-in-out;
+  width: 40px;
+}
+
+.material-switch>label::after {
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  content: '';
+  height: 24px;
+  left: -4px;
+  margin-top: -8px;
+  position: absolute;
+  top: -4px;
+  transition: all 0.3s ease-in-out;
+  width: 24px;
+}
+
+.material-switch>input[type="checkbox"]:checked+label::before {
+  background: inherit;
+  opacity: 0.5;
+}
+
+.material-switch>input[type="checkbox"]:checked+label::after {
+  background: inherit;
+  left: 20px;
+}
+
+// 
+
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(60%) sepia(12%) saturate(632%) hue-rotate(188deg) brightness(93%) contrast(91%);
+  // Target color: #868fac
+  // Source: https://codepen.io/sosuke/pen/Pjoqqp 
+}
+
+
+
+@media (min-width: 992px) {
+  .modal-lg {
+    .locationModal & {
+      max-width: 1030px;
+    }
+  }
+}
+
+.formControlTime {
+  height: calc(1.5em + 0.5rem + 9px) !important;
+  min-width: 120px;
+}
+
+
+.locationModal {
+  .locationDetailLeft {
+    // background:azure;
+    // border:1px solid #93f3f3;
+    min-height: 420px;
+  }
+
+  .locationDetailRight {
+    // background:azure;
+    // border:1px solid #93f3f3;
+    min-height: 420px;
+    max-height: 420px;
+  }
+
+  .company-details {
+    background-color: $white;
+  }
+}
+
+//   locationFilterBox
+
+.locationFilterBox {
+  .location-image-wrapper {
+    width: 72px;
+    height: 72px;
+    position: relative;
+
+    .location-image {
+      border-radius: 3px;
+    }
+  }
+
+  .locationActionsWrap {
+    a {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &:hover {
+    .locationActionsWrap {
+      a {
+
+        opacity: 1;
+        pointer-events: inherit;
+
+      }
+    }
+  }
+}
+
+.eC-pie {
+  height: 20px;
+  --stops: #007bff var(--pie-length, 0%), transparent 0;
+  background: linear-gradient(to right, var(--stops));
+  background-color: rgba($blue, .5);
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+
+  span {
+    font-size: 12px;
+    z-index:2;
+  }
+}
+
+.eC-pie:before {
+  content: ""
+}
+
+@supports (background: conic-gradient(white, black)) {
+
+  // https://caniuse.com/css-conic-gradients
+  .eC-pie {
+    width: 50px;
+    height: 50px;
+    background-image: conic-gradient(var(--stops));
+    border-radius: 50%;
+
+    &:before {
+      font-size: 10px;
+
+      font-weight: bold;
+      line-height: 40px;
+      text-align: center;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}

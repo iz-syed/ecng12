@@ -1,0 +1,136 @@
+/*******************
+customizer
+*******************/
+.customizer {
+  background: var(--eC-white);
+  position: fixed;
+  height: 100%;
+  width: 280px;
+  top: 0px;
+  right: -280px;
+  z-index: 100;
+  box-shadow: var(--eC-shadow);
+  transition: 0.3s ease-in;
+
+  .service-panel-toggle {
+    background: var(--eC-danger);
+    padding: 12px 20px;
+    color: var(--eC-white);
+    position: absolute;
+    top: 30%;
+    left: -54px;
+  }
+
+  &.show-service-panel {
+    right: 0px;
+  }
+
+  .customizer-body {
+    position: relative;
+    height: 100%;
+  }
+
+  .customizer-tab {
+    display: flex;
+
+    .nav-item {
+      width: 33.33%;
+      text-align: center;
+
+      .nav-link {
+        padding: 15px 12px;
+        color: var(--eC-body-color);
+        border-bottom: 3px solid transparent;
+
+        &:hover,
+        &.active {
+          border-bottom: 3px solid var(--eC-themecolor);
+          color: var(--eC-themecolor);
+        }
+      }
+    }
+  }
+}
+
+// .custom-control-label::after,
+// .custom-control-label::before {
+  // top: 0.15rem;
+// }
+
+
+.theme-color {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+
+  .theme-item {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+
+    .theme-link {
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      display: block;
+
+      &[data-logobg="skin1"],
+      &[data-navbarbg="skin1"],
+      &[data-sidebarbg="skin1"] {
+        background: var(--eC-skin1);
+        color: var(--eC-skin1);
+      }
+
+      &[data-logobg="skin2"],
+      &[data-navbarbg="skin2"],
+      &[data-sidebarbg="skin2"] {
+        background: var(--eC-skin2);
+      }
+
+      &[data-logobg="skin3"],
+      &[data-navbarbg="skin3"],
+      &[data-sidebarbg="skin3"] {
+        background: var(--eC-skin3);
+      }
+
+      &[data-logobg="skin4"],
+      &[data-navbarbg="skin4"],
+      &[data-sidebarbg="skin4"] {
+        background: var(--eC-skin4);
+      }
+
+      &[data-logobg="skin5"],
+      &[data-navbarbg="skin5"],
+      &[data-sidebarbg="skin5"] {
+        background: var(--eC-skin5);
+      }
+
+      &[data-logobg="skin6"],
+      &[data-navbarbg="skin6"],
+      &[data-sidebarbg="skin6"] {
+        background: var(--eC-gray-100);
+        box-shadow:0 0 5px rgba(var(--eC-black-rgb), 0.1) inset;
+      }
+
+      &[data-logobg="skin7"],
+      &[data-navbarbg="skin7"],
+      &[data-sidebarbg="skin7"] {
+        background: var(--eC-skin7);
+      }
+    }
+  }
+}
+
+// data-fonts
+.theme-color {
+  .theme-item {
+    .theme-link {
+      $theme-colors: (1:--eC-font-1, 2: --eC-font-2, 3: --eC-font-3, 4: --eC-font-4, 5: --eC-font-5, 6: --eC-font-6, 7: --eC-font-7);
+      @each $color in map-keys($theme-colors) {
+        &[data-font="font-#{$color}"] {
+          background-color: var(map-get($theme-colors, $color));
+        }
+      }
+    }
+  }
+}

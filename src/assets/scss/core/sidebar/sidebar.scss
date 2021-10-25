@@ -1,0 +1,173 @@
+// Sidebar
+$sidebar-link-padding: 25px;
+$sidebar-icon-size: 23px;
+$sidebar-first-level-padding: 0 0 10px 0;
+$sidebar-first-level-link-padding: 10px 15px;
+$sidebar-first-level-icon-size: 14px;
+
+/*******************
+Main sidebar
+******************/
+
+.left-sidebar {
+  position: fixed;
+  width: $sidebar-width-mini;
+  height: 100%;
+  top: 0px;
+  z-index: 11;
+  border-right: 1px solid var(--eC-border-color);
+  padding-top: $topbar-height;
+  box-shadow: var(--eC-shadow);
+  transition: 0.1s ease-in;
+}
+
+/*******************
+sidebar navigation
+******************/
+.scroll-sidebar {
+  height: 100%;
+  position: relative;
+
+  .sidebar-nav:hover {
+    width: 350px;
+    max-width: 350px;
+  }
+  
+  > .ps__rail-y {
+    left:0;
+    right:auto;
+  }
+
+}
+
+.sidebar-nav {
+  >ul {
+    >.sidebar-item {
+      width: var(--eC-sidebar-width-mini);
+
+      >.sidebar-link {
+        color: var(--eC-sidebar-text);
+        padding: $sidebar-link-padding;
+        border-bottom: 1px solid rgba(var(--eC-white-rgb), 0.6);
+        border-right: 3px solid var(--eC-transparent);
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        line-height: 25px;
+        position: relative;
+        opacity: 0.7;
+
+        i {
+          width: 35px;
+          line-height: 25px;
+          font-size: $sidebar-icon-size;
+          text-align: center;
+          
+          &.fa-googlemybusiness {
+            background: url('../../../images/business.svg') no-repeat center; 
+            height: 23px;
+          }
+          &.fa-googleanalytics {
+            background: url('../../../images/google_analytics.svg') no-repeat center; 
+            height: 23px;
+          }
+        }
+
+        .info-icon {
+          position: absolute;
+          font-size: 16px;
+          top: 20px;
+          right: 5px;
+        }
+
+        &.active,
+        &:hover {
+          border-right: 3px solid rgba(var(--eC-white-rgb), 0.6);
+          opacity: 1;
+        }
+      }
+
+      &:last-child {
+        >.sidebar-link {
+          border-bottom: none;
+        }
+      }
+
+      &:hover {
+        >.sidebar-link {
+          border-right: 3px solid rgba(var(--eC-white-rgb), 0.6);
+        }
+
+        .first-level {
+          width: 260px;
+        }
+      }
+
+      .first-level {
+        position: fixed;
+        left: 79px;
+        top: 70px;
+        padding: 12px 0;
+        padding-bottom: 100px;
+        width: 0px;
+        height: 250px;
+        // max-height:250px;
+        background: var(--eC-white);
+        box-shadow: var(--eC-shadow);
+        // transition: 0.1s ease-in;
+        overflow: hidden;
+
+        .desktop & {
+          padding-bottom: 12px;
+        //  height: inherit;
+       //   max-height: 300px;
+          // background:#85ce5d;
+        }
+
+        >.sidebar-item  {
+          app-ec-profile {
+            >.sidebar-link {
+              color: var(--eC-sidebar-text-dark);
+              padding: 12px 25px;
+              display: flex;
+              white-space: nowrap;
+              align-items: center;
+              line-height: 25px;
+
+              &:hover,
+              &.active {
+                background: rgba(var(--eC-black-rgb), 0.03);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*******************
+ common m-p removed
+******************/
+.sidebar-nav {
+  ul {
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.popOverMouseOut {
+  .list-unstyled {
+    .sidebar-item {
+      &:nth-child(1) {
+        &:nth-last-child(1) {
+          min-height:75px;
+        }
+      }
+    }
+  }
+}

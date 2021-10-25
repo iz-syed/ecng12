@@ -1,0 +1,355 @@
+
+// hexToRGB
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+// eC color map start
+  $eC-colors: (
+    // Theme Colors
+    'themecolor'                      :                     $themecolor,
+    'themecolor-rgb'                  :                     #{hexToRGB($themecolor)},
+
+    'skin1'                           :                     $themecolor,
+    'skin1-rgb'                       :                     #{hexToRGB($themecolor)},
+
+    'skin2'                           :                     $skin2,
+    'skin2-rgb'                       :                     #{hexToRGB($skin2)},
+
+    'skin3'                           :                     $skin3,
+    'skin3-rgb'                       :                     #{hexToRGB($skin3)},
+
+    'skin4'                           :                     $skin4,
+    'skin4-rgb'                       :                     #{hexToRGB($skin4)},
+
+    'skin5'                           :                     $skin5,
+    'skin5-rgb'                       :                     #{hexToRGB($skin5)},
+
+    'skin6'                           :                     $white,
+    'skin6-rgb'                       :                     #{hexToRGB($white)},
+
+    'skin7'                           :                     $skin7,
+    'skin7-rgb'                       :                     #{hexToRGB($skin7)},
+
+    // Dark Theme Colors
+    'dark'                            :                     $dark,
+    'dark-rgb'                        :                     #{hexToRGB($dark)},
+
+    'dark-primary'                    :                     $dark-primary, // header // sidebar
+    'dark-primary-rgb'                :                     #{hexToRGB($dark-primary)},
+
+    'dark-secondary'                  :                     $dark-secondary,
+    'dark-secondary-rgb'              :                     #{hexToRGB($dark-secondary)},
+
+    'dark-100'                        :                     $dark-100,
+    'dark-100-rgb'                    :                     #{hexToRGB($dark-100)},
+
+    'dark-50'                         :                     $dark-50,
+    'dark-50-rgb'                     :                     #{hexToRGB($dark-50)},
+    
+    'dark-25'                         :                     $dark-25,
+    'dark-25-rgb'                     :                     #{hexToRGB($dark-25)},
+
+    'dark-border'                     :                     $dark-border,
+    'dark-border-rgb'                 :                     #{hexToRGB($dark-border)},
+
+    'dark-text'                       :                     $dark-text,
+    'dark-text-rgb'                   :                     #{hexToRGB($dark-text)},
+
+    // Topbar Colors
+    'topbar'                          :                     $topbar,
+    'topbar-rgb'                      :                     #{hexToRGB($topbar)},
+
+    'topbar-height'                   :                     $topbar-height,
+    'topbar-navlink-padding'          :                     $topbar-navlink-padding,
+    'topbar-navlink-font-size'        :                     $topbar-navlink-font-size,
+    'topbar-navlink-height'           :                     $topbar-navlink-height,
+    'topbar-navbrand-padding'         :                     $topbar-navbrand-padding,
+
+    'sidebar-text-dark'               :                     $dark-text,
+    'sidebar-text-dark-rgb'           :                     #{hexToRGB($dark-text)},
+
+    'sidebar-text'                    :                     $white,
+    'sidebar-text-rgb'                :                     #{hexToRGB($white)},
+    
+    'sidebar-width-full'              :                     $sidebar-width-full,
+    'sidebar-width-iconbar'           :                     $sidebar-width-iconbar,
+    'sidebar-width-mini'              :                     $sidebar-width-mini,
+    
+
+    // Border
+    'border-radius'                   :                     $border-radius,
+
+    // Font, line-height, and color for body text, headings, and more.
+    'font-size-base'                  :                     $font-size-base,
+    'font-family-sans-serif'          :                     $font-family-sans-serif,
+    'font-weight-light'               :                     $font-weight-light,
+    'font-weight-normal'              :                     $font-weight-normal,
+    'font-weight-medium'              :                     $font-weight-medium,
+    'font-weight-bold'                :                     $font-weight-bold,
+
+   
+    // Color system
+    'white'                           :                     $white,
+    'white-rgb'                       :                     #{hexToRGB($white)},
+
+    'gray-100'                        :                     $gray-100,
+    'gray-100-rgb'                    :                     #{hexToRGB($gray-100)},
+
+    'light'                           :                     $light,
+    'light-rgb'                       :                     #{hexToRGB($light)},
+
+
+    'gray-200'                        :                     $gray-200,
+    'gray-200-rgb'                    :                     #{hexToRGB($gray-200)},
+
+    'border-color'                    :                     $border-color,
+    'border-color-rgb'                :                     #{hexToRGB($border-color)},
+
+    'secondary'                       :                     $secondary,
+    'secondary-rgb'                   :                     #{hexToRGB($secondary)},
+
+    'gray-300'                        :                     $gray-300,
+    'gray-300-rgb'                    :                     #{hexToRGB($gray-300)},
+
+    'gray-400'                        :                     $gray-400,
+    'gray-400-rgb'                    :                     #{hexToRGB($gray-400)},
+
+    'gray-500'                        :                     $gray-500,
+    'gray-500-rgb'                    :                     #{hexToRGB($gray-500)},
+
+    'gray-600'                        :                     $gray-600,
+    'gray-600-rgb'                    :                     #{hexToRGB($gray-600)},
+
+    'gray-700'                        :                     $gray-700,
+    'gray-700-rgb'                    :                     #{hexToRGB($gray-700)},
+
+    'gray-800'                        :                     $gray-800,
+    'gray-800-rgb'                    :                     #{hexToRGB($gray-800)},
+
+    'gray-900'                        :                     $gray-900,
+    'gray-900-rgb'                    :                     #{hexToRGB($gray-900)},
+
+    'black'                           :                     $black,
+    'black-rgb'                       :                     #{hexToRGB($black)},
+
+    'blue'                            :                     $blue,
+    'blue-rgb'                        :                     #{hexToRGB($blue)},
+
+    'info'                            :                     $info,
+    'info-rgb'                        :                     #{hexToRGB($info)},
+
+    'primary'                         :                     $primary,
+    'primary-rgb'                     :                     #{hexToRGB($primary)},
+
+    'primary-light'                   :                     $primary-light,
+    'primary-light-rgb'               :                     #{hexToRGB($primary-light)},
+
+    'gray-primary'                    :                     $gray-primary,
+    'gray-primary-rgb'                :                     #{hexToRGB($gray-primary)},
+
+    'indigo'                          :                     $indigo,
+    'indigo-rgb'                      :                     #{hexToRGB($indigo)},
+
+    'purple'                          :                     $purple,
+    'purple-rgb'                      :                     #{hexToRGB($purple)},
+    
+    'pink'                            :                     $pink,
+    'pink-rgb'                        :                     #{hexToRGB($pink)},
+
+    'red'                             :                     $red,
+    'red-rgb'                         :                     #{hexToRGB($red)},
+
+    'danger'                          :                     $danger,
+    'danger-rgb'                      :                     #{hexToRGB($danger)},
+
+    'danger-light'                    :                     $danger-light,
+    'danger-light-rgb'                :                     #{hexToRGB($danger-light)},
+
+    'danger-soft'                     :                     $danger-soft,
+    'danger-soft-rgb'                 :                     #{hexToRGB($danger-soft)},
+
+    'orange'                          :                     $orange,
+    'orange-rgb'                      :                     #{hexToRGB($orange)},
+
+    'yellow'                          :                     $yellow,
+    'yellow-rgb'                      :                     #{hexToRGB($yellow)},
+
+    'green'                           :                     $green,
+    'green-rgb'                       :                     #{hexToRGB($green)},
+
+    'success'                         :                     $success,
+    'success-rgb'                     :                     #{hexToRGB($success)},
+
+
+    'success-light'                   :                     $success-light,
+    'success-light-rgb'               :                     #{hexToRGB($success-light)},
+
+    'teal'                            :                     $teal,
+    'teal-rgb'                        :                     #{hexToRGB($teal)},
+
+    'cyan'                            :                     $cyan,
+    'cyan-rgb'                        :                     #{hexToRGB($cyan)},
+
+    'text-muted'                      :                     $gray-500,
+    'text-muted-rgb'                  :                     #{hexToRGB($gray-500)},
+
+    'persian-indigo'                  :                     $persian-indigo,
+    'persian-indigo-rgb'              :                     #{hexToRGB($persian-indigo)},
+
+    'cardinal'                        :                     $cardinal,
+    'cardinal-rgb'                    :                     #{hexToRGB($cardinal)},
+
+    'axolotl'                         :                     $axolotl,
+    'axolotl-rgb'                     :                     #{hexToRGB($axolotl)},
+
+    'golden-fizz'                     :                     $golden-fizz,
+    'golden-fizz-rgb'                 :                     #{hexToRGB($golden-fizz)},
+
+    'selective-yellow'                :                     $selective-yellow,
+    'selective-yellow-rgb'            :                     #{hexToRGB($selective-yellow)},
+
+    'picton-blue'                     :                     $picton-blue,
+    'picton-blue-rgb'                 :                     #{hexToRGB($picton-blue)},
+
+    'mercury'                         :                     $mercury,
+    'mercury-rgb'                     :                     #{hexToRGB($mercury)},
+
+    'dusty-gray'                      :                     $dusty-gray,
+    'dusty-gray-rgb'                  :                     #{hexToRGB($dusty-gray)},
+
+    'warning'                         :                     $warning,
+    'warning-rgb'                     :                     #{hexToRGB($warning)},
+
+    'warning-light'                   :                     $warning-light,
+    'warning-light-rgb'               :                     #{hexToRGB($warning-light)},
+
+    // Social bgs
+    'facebook'                        :                     $facebook,
+    'facebook-rgb'                    :                     #{hexToRGB($facebook)},
+
+    'twitter'                         :                     $twitter,
+    'twitter-rgb'                     :                     #{hexToRGB($twitter)},
+
+    'instagaram-primary'              :                     $instagaram-primary,
+    'instagaram-primary-rgb'          :                     #{hexToRGB($instagaram-primary)},
+
+    'instagaram-secondary'            :                     $instagaram-secondary,
+    'instagaram-secondary-rgb'        :                     #{hexToRGB($instagaram-secondary)},
+
+    'instagaram-tertiary'             :                    $instagaram-tertiary,
+    'instagaram-tertiary-rgb'         :                    #{hexToRGB($instagaram-tertiary)},
+
+    'instagaram-quaternary'           :                    $instagaram-quaternary,
+    'instagaram-quaternary-rgb'       :                    #{hexToRGB($instagaram-quaternary)},
+
+    'google-my-business'              :                    $google-my-business,
+    'google-my-business-rgb'          :                    #{hexToRGB($google-my-business)},
+
+    'linked-in'                       :                    $linked-in,
+    'linked-in-rgb'                   :                    #{hexToRGB($linked-in)},
+
+    'pinterest'                       :                    $pinterest,
+    'pinterest-rgb'                   :                    #{hexToRGB($pinterest)},
+
+    'google-analytics'                :                    $google-analytics,
+    'google-analytics-rgb'            :                    #{hexToRGB($google-analytics)},
+
+    'youtube'                         :                    $youtube,
+    'youtube-rgb'                     :                    #{hexToRGB($youtube)},
+
+    'blogger'                         :                    $blogger,
+    'blogger-rgb'                     :                    #{hexToRGB($blogger)},
+
+    'main-body-bg'                    :                    $main-body-bg,
+    'main-body-bg-rgb'                :                    #{hexToRGB($main-body-bg)},
+
+    'body-bg'                         :                    $body-bg,
+    'body-bg-rgb'                     :                    #{hexToRGB($body-bg)},
+
+    'body-color'                      :                    $body-color,
+    'body-color-rgb'                  :                    #{hexToRGB($body-color)},
+
+    'font-1'                          :                    $dark-text,
+    'font-1-rgb'                      :                    #{hexToRGB($dark-text)},
+
+    'font-2'                          :                    $skin5,
+    'font-2-rgb'                      :                    #{hexToRGB($skin5)},
+
+    'font-3'                          :                    $blue,
+    'font-3-rgb'                      :                    #{hexToRGB($blue)},
+
+    'font-4'                          :                    $red,
+    'font-4-rgb'                      :                    #{hexToRGB($red)},
+
+    'font-5'                          :                    $cardinal,
+    'font-5-rgb'                      :                    #{hexToRGB($cardinal)},
+
+    'font-6'                          :                    $skin2,
+    'font-6-rgb'                      :                    #{hexToRGB($skin2)},
+
+    'font-7'                          :                    $skin4,
+    'font-7-rgb'                      :                    #{hexToRGB($skin4)},
+
+    // Transitions 
+    'transitions'                     :                    $transitions,
+
+    // Navbar
+
+    'navbar-light-color'              :                    $navbar-light-color,
+    'navbar-light-color-rgb'          :                    #{hexToRGB($navbar-light-color)},
+
+    'navbar-light-hover-color'        :                    $navbar-light-hover-color,
+    'navbar-light-hover-color-rgb'    :                    #{hexToRGB($navbar-light-hover-color)},
+
+    'navbar-light-active-color'       :                    $navbar-light-active-color,
+    'navbar-light-active-color-rgb'   :                    #{hexToRGB($navbar-light-active-color)},
+
+
+    // Boxed layout width 
+    'boxed-width'                     :                     $boxed-width,
+
+    'shadow'                          :                     $shadow,
+
+    'electric-lime'                   :                     $electric-lime,
+    'azure-radiance'                  :                     $azure-radiance,
+    'green-apple'                     :                     $green-apple,
+    'silver-chalice'                  :                     $silver-chalice,
+    'guardsman-red'                   :                     $guardsman-red,
+    'fuchsia-blue'                    :                     $fuchsia-blue,
+
+    'gallery-gray'                    :                     $gallery-gray,
+    'chambray'                        :                     $chambray,
+    'storm-gray'                      :                     $storm-gray,
+
+    'Tropaz'                          :                     $Tropaz,
+    'Tropaz-rgb'                      :                     #{hexToRGB($Tropaz)},
+
+    'color'                           :                     $white,
+    'color-rgb'                       :                     #{hexToRGB($white)},
+    'transparent'                     :                     $transparent
+    
+
+    // Other Stuffs
+
+    
+        
+    
+    
+  ) !default;
+// eC color map end
+
+// Prefix for :root CSS variables
+$variable-prefix: eC- !default;
+
+
+
+:root {
+  // --test:red;
+
+  // Custom variable values only support SassScript inside `#{}`.
+  @each $color, $value in $eC-colors {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+}

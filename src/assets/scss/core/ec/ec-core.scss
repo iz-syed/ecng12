@@ -1,0 +1,873 @@
+
+:root {
+  --space:0px;
+  --col: 1;
+}
+$qubes: (
+  50: ($qube * 1),          //  $qube * 1       = 50
+  75: ($qube * 1 + 25),     //  $qube * 1  + 25 = 75
+  100: ($qube * 2),         //  $qube * 2       = 100
+  120: ($qube * 2 + 20),    //  $qube * 2  + 20 = 120
+  150: ($qube * 3),         //  $qube * 3       = 150
+  200: ($qube * 4),         //  $qube * 3       = 150
+  250: ($qube * 5),         //  $qube * 3       = 150
+  275: ($qube * 5 + 25),    //  $qube * 5  + 10  = 300
+  300: ($qube * 6),         //  $qube * 6        = 300
+  340: ($qube * 7 - 10),    //  $qube * 7  - 10  = 340
+  350: ($qube * 7),         //  $qube * 7        = 350
+  400: ($qube * 8),         //  $qube * 8        = 400
+  440: ($qube * 9 - 10),    //  $qube * 9  - 10  = 440
+  450: ($qube * 9),         //  $qube * 9        = 450
+  500: ($qube * 10),        //  $qube * 10       = 500
+  550: ($qube * 11),        //  $qube * 11       = 550
+  600: ($qube * 12),         //  $qube * 12       = 600
+  700: ($qube * 14),         //  $qube * 14       = 700
+  800: ($qube * 16)         //  $qube * 16       = 800
+);
+
+// min height
+@each $value in map-keys($qubes) {
+  .min-h-#{$value} {
+    min-height: (map-get($qubes, $value));
+  }
+}
+
+// max height
+@each $value in map-keys($qubes) {
+  .max-h-#{$value} {
+    max-height: (map-get($qubes, $value));
+  }
+}
+
+// min width
+@each $value in map-keys($qubes) {
+  .min-w-#{$value} {
+    min-width: (map-get($qubes, $value)) !important;
+  }
+}
+
+// max width
+@each $value in map-keys($qubes) {
+  .max-w-#{$value} {
+    max-width: (map-get($qubes, $value));
+  }
+}
+
+
+
+
+.w-inherit {
+  width: inherit !important;
+}
+
+#main-wrapper {
+  margin-bottom: -20px;
+}
+
+$viewport-w: (
+    '25': '25vw', 
+    '50': '50vw', 
+    '75': '75vw', 
+    "100": "100vw"
+);
+
+
+// viewport width
+@each $value in $viewport-w {
+  .vp-w-#{nth($value, 1)} {
+    width:#{nth($value, 2)};
+  }
+}
+
+
+$viewport-h: (
+    '25': '25vh', 
+    '50': '50vh',
+    '55': '55vh', 
+    '75': '75vh', 
+    "100": "100vh"
+);
+
+// viewport height
+@each $value in $viewport-h {
+  .vp-h-#{nth($value, 1)} {
+    height:#{nth($value, 2)};
+  }
+}
+
+// chart bar color
+
+.blue,
+.bg-blue {
+  background-color: var(--eC-blue);
+}
+
+.blue-light {
+  background-color: rgba($blue, 0.1);
+}
+
+.text-blue {
+  color: var(--eC-blue);
+}
+
+.indigo,
+.bg-indigo {
+  background-color: var(--eC-indigo);
+}
+
+.indigo-light {
+  background-color: rgba($indigo, 0.1);
+}
+
+.text-indigo {
+  color: var(--eC-indigo);
+}
+
+.purple,
+.bg-purple {
+  background-color: var(--eC-purple);
+}
+
+.purple-light {
+  background-color: rgba($purple, 0.1);
+}
+
+.text-purple {
+  color: var(--eC-purple);
+}
+
+.pink,
+.bg-pink {
+  background-color: var(--eC-pink);
+}
+
+.pink-light {
+  background-color: rgba($pink, 0.1);
+}
+
+.text-pink {
+  color: var(--eC-pink);
+}
+
+.red,
+.bg-red {
+  background-color: var(--eC-red);
+}
+
+.red-light {
+  background-color: rgba($red, 0.1);
+}
+
+.text-red {
+  color: var(--eC-red);
+}
+
+.orange,
+.bg-orange {
+  background-color: var(--eC-orange);
+}
+
+.orange-light {
+  background-color: rgba($orange, 0.1);
+}
+
+.text-orange {
+  color: var(--eC-orange);
+}
+
+.teal,
+.bg-teal {
+  background-color: var(--eC-teal);
+}
+
+.teal-light {
+  background-color: rgba($teal, 0.1);
+}
+
+.text-teal {
+  color: var(--eC-teal);
+}
+
+.cyan,
+.bg-cyan {
+  background-color: var(--eC-cyan);
+}
+
+.cyan-light {
+  background-color: rgba($cyan, 0.1);
+}
+
+.text-cyan {
+  color: car(--eC-cyan);
+}
+
+.persian-indigo,
+.bg-persian-indigo {
+  background-color: var(--eC-persian-indigo);
+}
+
+.persian-indigo-light {
+  background-color: rgba($persian-indigo, 0.1);
+}
+
+.text-persian-indigo {
+  color: var(--eC-persian-indigo);
+}
+
+.cardinal,
+.bg-cardinal {
+  background-color: var(--eC-cardinal);
+}
+
+.cardinal-light {
+  background-color: rgba($cardinal, 0.1);
+}
+
+.text-cardinal {
+  color: var(--eC-cardinal);
+}
+
+.axolotl,
+.bg-axolotl {
+  background-color: var(--eC-axolotl);
+}
+
+.axolotl-light {
+  background-color: rgba($axolotl, 0.1);
+}
+
+.text-axolotl {
+  color: var(--eC-axolotl);
+}
+
+.dark-gray,
+.bg-dark-gray {
+  background-color: var(--eC-gray-900);
+}
+
+.dark-gray-light {
+  background-color: rgba($gray-900, 0.1);
+}
+
+.text-dark-gray {
+  color: var(--eC-gray-900);
+}
+
+.text-gray {
+  color: var(--eC-body-color);
+}
+
+.selective-yellow,
+.bg-selective-yellow {
+  background-color: var(--eC-selective-yellow);
+}
+
+.break-word {
+  word-break: break-all;
+}
+
+@-webkit-keyframes placeholderAnimation {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(30%, 0, 0);
+  }
+}
+
+@keyframes placeholderAnimation {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(30%, 0, 0);
+  }
+}
+
+.card-columns {
+  &.column-1 {
+    @include media-breakpoint-up(sm) {
+      column-count: 1;
+    }
+  }
+
+  &.column-2 {
+    @include media-breakpoint-up(sm) {
+      column-count: 2;
+    }
+  }
+
+  &.column-4 {
+    @include media-breakpoint-up(sm) {
+      column-count: 4;
+    }
+  }
+}
+
+.bg-transparent {
+  background-color: var(--eC-transparent) !important
+}
+
+.card {
+  .h-100 {
+    max-height: calc(100% - 20px);
+  }
+
+  &.card-full-height {
+    .h-100 {
+      max-height: calc(100% - 0px);
+    } 
+  }
+}
+
+.dropdown {
+  .dropdown-menu {
+    z-index: 10;
+  }
+}
+
+.modal {
+  z-index: 1050 + 20;
+}
+
+.font-regular {
+  font-family: 'ProximaNova-Regular';
+}
+
+// check box fluid right alignment
+.custom-control--right {
+  padding-right: 1.5rem;
+
+  .custom-control-label {
+
+    &:before,
+    &:after {
+      left: inherit;
+    }
+
+    &:before {
+      right: -1.5rem;
+    }
+
+    &:after {
+      right: -1.5rem;
+    }
+  }
+}
+
+.scrollable {
+  &:not(.modal-body) {
+    padding-bottom: 5px;
+  }
+
+  &.show-scroll-x {
+    .ps__rail-x {
+      opacity: 0.6;
+      z-index: 99;
+      pointer-events: none;
+    }
+  }
+
+  &.show-scroll-y {
+    .ps__rail-y {
+      opacity: 0.6;
+      z-index: 99;
+      pointer-events: none;
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+// for blinking text
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+
+  .Firefox &,
+  .Safari & {
+    font-weight: normal;
+  }
+}
+
+$alpha: ('0': '0', '1': '0.1', '2': '0.2', "3": "0.3", "4": "0.4", "5": "0.5", "6": "0.6", "7": "0.7", "8": "0.8", "9": "0.9");
+
+// alpha
+@each $value in $alpha {
+  .alpha-#{nth($value, 1)} {
+    opacity:#{nth($value, 2)};
+  }
+}
+
+
+.hugeModal > .modal-dialog {
+  max-width: 1450px !important;
+  width: 90% !important;
+  margin-top: 53px;
+}
+
+.v-hide {
+  pointer-events: none;
+  opacity: 0;
+}
+
+@mixin clearFix(){
+  &:before,
+  &:after{
+    content: " "; 
+    display: table; 
+  }
+
+  &:after{
+    display: block;
+    clear: both;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden;
+  }
+  &{
+    *zoom: 1;
+  }
+}
+
+// @include clearFix();
+
+[hover="false"] {
+  &:hover {
+    background-color: var(--eC-transparent);
+    // border-color: var(--eC-transparent);
+  }
+}
+
+[box-shadow="false"] {
+  box-shadow: 0 0 0 var(--eC-transparent);
+}
+
+.block-fix {
+  *zoom: 1;
+  display: block;
+  // border:1px solid var(--eC-primary);
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.btn {
+  &-sm {
+    &.extra-sm {
+      padding-top: 0.10rem !important;
+      padding-bottom: 0.10rem !important;
+    }
+  }
+}
+
+.ngb-alert-wrapper {
+  ngb-alert {
+    max-width:800px;
+    white-space: pre-line;
+  }
+}
+
+.w-70 {
+  width: 70% !important;
+}
+// .modal-dialog {
+//   .modal.show &.ecPopupDraggable {
+//     align-items: start;
+//   }
+// }
+
+
+//  Truncate Multi-Line upto 5 lines
+:root {
+  --lh: 1.4rem;
+  line-height: var(--lh);
+}
+
+$lines: 1, 2, 3, 4, 5;
+
+@each $line in $lines {
+  .truncate-#{$line} {
+    --max-lines: #{$line};
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+    
+    // &:before {
+    //   content: "...";
+    //   position: absolute;
+    //   bottom: 13px;
+    //   right: 0;
+    //   background: var(--eC-white);
+    //   padding-left: 17px;
+    //   background: linear-gradient(90deg, rgba(var(--eC-white-rgb),0.8) 0%, rgba(var(--eC-white-rgb),1) 100%);
+    // }
+  }
+}
+
+.custom-control-small {
+  label {
+    &:before,
+    &:after {
+      transform:scale(0.7);
+    }
+  }
+// 
+}
+.c-w-100 {
+  max-width: calc(100% - 0%);
+}
+
+
+.hidden {
+  &-x {
+    overflow-x: hidden;
+  }
+  &-y {
+    overflow-y: hidden;
+  }
+  overflow:hidden;
+}
+
+.scroll-x {
+  width:100%;
+  overflow:auto;
+  padding-bottom: 5px;
+}
+
+.tooltip-m {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--eC-black); /* If you want dots under the hoverable text */
+
+  /* Tooltip text */
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--eC-black);
+    color: var(--eC-white);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+}
+
+h6, .h6 {
+  font-size:1rem;
+}
+
+.custom-file-label {
+  &:after {
+    background-color: var(--eC-blue);
+    color: var(--eC-white);
+  }
+} 
+
+$customSizes: () !default;
+$customSizes: map-merge(
+  (
+    10: 10%,
+    20: 20%,
+    30: 30%,
+    35: 35%,
+    40: 40%,
+    60: 60%,
+    65: 65%,
+    70: 70%,
+    80: 80%,
+    90: 95%
+  ),
+  $customSizes
+);
+
+
+@each $prop,
+$abbrev in (width: w, max-width: max-w) {
+  @each $size,
+  $length in $customSizes {
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+  }
+}
+
+// .w-65 {
+//   width:65%;
+// }
+
+
+// 
+
+// https://codepen.io/adambene/pen/xRWrXN
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+
+  input[type=file] {
+    // font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // opacity: 0;
+
+    // position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    margin: 0;
+    opacity: 0;
+    font-size: 0;
+    &::-webkit-file-upload-button {
+      cursor: pointer;
+    }
+  }
+
+  .upload-btn {
+    background-color:var(--eC-primary);
+    padding: 7px 20px;
+    border-radius: 3px;
+    font-size: 1rem;
+    color:var(--eC-white);
+    border:0;
+  }
+}
+
+// .btn {
+//   border: 2px solid gray;
+//   color: gray;
+//   background-color: white;
+//   padding: 8px 20px;
+//   border-radius: 8px;
+//   font-size: 20px;
+//   font-weight: bold;
+// }
+
+
+.custom-control-label::before{
+  --eC-color:#bac5d6;
+  border-color:var(--eC-color);
+}
+
+.feather-fill {
+  fill: currentColor !important;
+  stroke:var(--eC-white) !important;
+  transform:scale(1.1)
+}
+
+.text-indent {
+  &-n-1 {
+    text-indent: -1px;
+  }
+  &-1 {
+    text-indent: 1px;
+  }
+  &-2 {
+    text-indent: 2px;
+  }
+  &-3 {
+    text-indent: 3px;
+  }
+}
+
+$eC-directions: ('t': 'top', 'r':'right', 'b':'bottom', 'l':'left');
+
+@each $value in $eC-directions {
+  .eC-p#{nth($value, 1)} {
+    padding-#{nth($value, 2)}: var(--space)
+  }
+
+  .eC-m#{nth($value, 1)} {
+      margin-#{nth($value, 2)}: var(--space)
+  }
+
+  .eC-#{nth($value, 1)} {
+    #{nth($value, 2)}: var(--space)
+  }
+}
+
+.eC-p {
+  padding:var(--space);
+}
+
+.eC-m {
+  margin:var(--space);
+}
+
+.eC-w {
+  width: var(--space);
+}
+
+.eC-min-w {
+  min-width: var(--space);
+}
+
+.eC-max-w {
+  max-width: var(--space);
+}
+
+.eC-h {
+  height: var(--space);
+}
+
+.eC-min-h {
+  min-height: var(--space);
+}
+
+.eC-max-h {
+  max-height: var(--space);
+  width:var(--space);
+}
+
+.eC-min-w {
+  min-width:var(--space);
+}
+
+.eC-max-w {
+  max-width:var(--space);
+}
+$customPaddingMargin: () !default;
+$customPaddingMargin: map-merge(
+  (
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25px: 25px,
+    30: 30px
+  ),
+  $customPaddingMargin
+);
+
+
+@each $prop,
+$abbrev in (padding: px, margin: mx) {
+  @each $size,
+  $length in $customPaddingMargin {
+    .eC-#{$abbrev}-#{$size} {
+      #{$prop}-left: $length !important;
+      #{$prop}-right: $length !important;
+    }
+  }
+}
+
+$cols: (
+  5: ($eC-col * 10),    
+  10: ($eC-col * 10),
+  15: ($eC-col * 15),
+  20: ($eC-col * 20),
+  25: ($eC-col * 25),
+  30: ($eC-col * 30),
+  35: ($eC-col * 35),
+  40: ($eC-col * 40),
+  45: ($eC-col * 45),
+  50: ($eC-col * 50),
+  55: ($eC-col * 55),
+  60: ($eC-col * 60),
+  65: ($eC-col * 65),
+  70: ($eC-col * 70),
+  75: ($eC-col * 75),
+  80: ($eC-col * 80),
+  85: ($eC-col * 85),
+  90: ($eC-col * 90),
+  95: ($eC-col * 95),
+  100: ($eC-col * 100)
+);
+
+// eC-col
+@each $value in map-keys($cols) {
+  .eC-col-#{$value} {
+    flex: 0 0 (map-get($cols, $value)) !important;
+    max-width: (map-get($cols, $value)) !important;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+.fa-spin-45 {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.fa-spin-45-before {
+  &:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+  }
+}
+
+.fa-rectangle-wide-aida,
+.fa-rectangle-wide-pas {
+  position:relative;
+
+  &:after {
+    position:absolute;
+    left: -9px;
+    font-family:arial;
+    font-weight:normal;
+    font-size: 12px;
+    color:var(--eC-white);
+    width:40px;
+    text-align:center;
+    height: 18px;
+    border-radius: 3px;
+    line-height: 18px;
+    top: 3px;
+  }
+}
+
+.fa-rectangle-wide-aida {
+  &:after {
+    content:"AIDA";   
+    background: var(--eC-body-color);
+  }
+}
+
+.fa-rectangle-wide-pas {
+  &:after {
+    content:"PAS";
+    background: #8a3bf7;
+  }
+}

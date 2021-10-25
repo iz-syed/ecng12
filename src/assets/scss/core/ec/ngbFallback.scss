@@ -1,0 +1,39 @@
+// NGB fallback fix
+
+.btn:not(:disabled):not(.disabled).active:focus, 
+.btn:not(:disabled):not(.disabled):active:focus, 
+.show>.btn.dropdown-toggle:focus {
+    box-shadow:0 0 0 0 rgb(38 143 255 / 50%);
+ }
+
+ .btn-primary:focus, 
+ .btn-primary.focus {
+    background-color: var(--eC-blue);
+    border-color: var(--eC-blue);
+    color:var(--eC-white);
+ }
+
+ .btn-secondary:focus, 
+ .btn-secondary.focus {
+    background-color: var(--eC-gray-200);
+    border-color: var(--eC-gray-200);
+    color:var(--eC-gray-900);
+ }
+ 
+ 
+ .ngb-dp-arrow-btn:focus {
+   outline-width:0 !important;
+ }
+
+ pre {
+    [data-theme="dark"] & {
+       color:#e83e8c;
+    }
+ }
+
+ .bs-popover-top > .arrow::after, 
+ .bs-popover-auto[x-placement^=top] > .arrow::after {
+   [data-theme="dark"] & {
+      border-top-color:var(--eC-gray-900);
+   }
+ }

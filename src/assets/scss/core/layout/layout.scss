@@ -1,0 +1,231 @@
+// App
+
+/*============================================================== 
+ For all pages 
+ ============================================================== */
+
+#main-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-wrapper {
+  background: var(--eC-body-bg);
+  position: relative;
+  transition: 0.2s ease-in;
+}
+
+.page-wrapper>.container-fluid {
+  padding: 30px 30px 0;
+  min-height: calc(100vh - 95px);
+}
+
+
+/*******************
+ Footer
+*******************/
+
+.footer {
+  // padding: 0 20px 15px;
+  padding: 0;
+}
+
+
+/*******************
+ Stickey inner-left-part
+*******************/
+
+$left-part-width:260px;
+
+:root {
+  --eC-left-part-width: $left-part-width
+}
+
+.left-part {
+  height: 100%;
+  width: var(--eC-left-part-width);
+  position: absolute;
+  border-right: 1px solid var(--eC-border-color);
+
+  &.fixed-left-part {
+    position: fixed;
+    top: 0px;
+    padding-top: 10px;
+  }
+
+  .show-left-part {
+    position: absolute;
+    top: 45%;
+    right: -41px;
+  }
+}
+
+.right-part {
+  width: calc(100% - 260px);
+  min-height: calc(100vh - 64px);
+  overflow: auto;
+  margin-left: var(--eC-left-part-width);
+}
+
+.reverse-mode {
+  .left-part {
+    right: 0;
+    border-left: 1px solid var(--eC-border-color);
+  }
+
+  .show-left-part {
+    right: auto;
+    left: -41px;
+  }
+
+  .right-part {
+    margin-left: 0px;
+    margin-right: var(--eC-left-part-width);
+  }
+}
+
+
+/*******************
+ Vertical layout
+*******************/
+
+#main-wrapper[data-layout="vertical"] {
+
+  /*Vertical*/
+  .topbar .top-navbar .navbar-header {
+    //width: $sidebar-width-full;
+    transition: 0.2s ease-in;
+  }
+
+  /*sidebar type*/
+  &[data-sidebartype="full"] {
+    .page-wrapper {
+      margin-left: var(--eC-sidebar-width-mini);
+    }
+  }
+
+  /*Sidebar position*/
+  &[data-sidebar-position="fixed"] {
+    .topbar .top-navbar .navbar-header {
+      position: fixed;
+      z-index: 10;
+    }
+
+    .left-sidebar {
+      position: fixed;
+    }
+  }
+
+  /*Header position*/
+  &[data-header-position="fixed"] {
+    .topbar {
+      position: fixed;
+      width: 100%;
+    }
+
+    .page-wrapper {
+      padding-top: var(--eC-topbar-height);
+    }
+  }
+
+  /*Boxed Layout*/
+  &[data-boxed-layout="boxed"] {
+    max-width: var(--eC-boxed-width);
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 1px 0 80px rgba(var(--eC-black-rgb), 0.2);
+  }
+
+  &[data-boxed-layout="boxed"][data-header-position="fixed"] {
+    .topbar {
+      max-width: var(--eC-boxed-width);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+/*******************
+ Vertical responsive layout
+*******************/
+
+@include media-breakpoint-up(md) {
+  #main-wrapper[data-layout="vertical"] {
+
+    &[data-sidebar-position="fixed"][data-sidebartype="mini-sidebar"] {
+      .topbar .top-navbar .navbar-collapse {
+        margin-left: $sidebar-width-mini;
+      }
+    }
+
+    &[data-sidebar-position="fixed"][data-sidebartype="iconbar"] {
+      .topbar .top-navbar .navbar-collapse {
+        margin-left: $sidebar-width-iconbar;
+      }
+    }
+
+
+
+    /*Fixed sidebar with minisidebar*/
+    &[data-sidebar-position="fixed"][data-sidebartype="mini-sidebar"] {
+      .topbar .top-navbar .navbar-collapse {
+        margin-left: $sidebar-width-mini;
+      }
+    }
+
+    &[data-sidebartype="mini-sidebar"] {
+
+      .sidebar-nav {
+
+        .hide-menu,
+        .has-arrow:after {
+          display: none;
+        }
+
+        .nav-small-cap {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  #main-wrapper {
+    &[data-sidebartype="mini-sidebar"] {
+      .left-sidebar {
+        left: -$sidebar-width-mini;
+      }
+    }
+
+    &.show-sidebar {
+      .left-sidebar {
+        left: 0;
+      }
+    }
+
+    &[data-layout="vertical"][data-sidebar-position="fixed"] {
+      .topbar .top-navbar {
+        .navbar-collapse {
+          position: relative;
+          top: $topbar-height;
+        }
+      }
+    }
+
+    /*Header position*/
+    &[data-layout="vertical"][data-header-position="fixed"][data-sidebar-position="fixed"] {
+      .topbar .top-navbar {
+        .navbar-collapse {
+          position: relative;
+          top: $topbar-height;
+        }
+      }
+    }
+  }
+}

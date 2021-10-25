@@ -1,0 +1,115 @@
+.sidebar-item {
+  &.gu-mirror {
+    list-style: none;
+    border:1px solid var(--eC-gray-200);
+    width: var(--eC-sidebar-width-mini);
+
+      .sidebar-item {
+        width: var(--eC-sidebar-width-mini);
+      }
+  
+      .sidebar-link {
+        color: var(--eC-sidebar-text);
+        padding: $sidebar-link-padding;
+        border-bottom: 1px solid rgba(var(--eC-white-rgb), 0.6);
+        border-right: 3px solid var(--eC-transparent);
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        line-height: 25px;
+        position: relative;
+        opacity: 0.7;
+  
+        i {
+          width: 35px;
+          line-height: 25px;
+          font-size: $sidebar-icon-size;
+          text-align: center;
+          color:var(--eC-body-color);
+          
+          &.fa-googlemybusiness {
+            background: url('../../../images/business.svg') no-repeat center; 
+            height: 23px;
+          }
+  
+          &.fa-googleanalytics {
+            background: url('../../../images/google_analytics.svg') no-repeat center; 
+            height: 23px;
+          }
+        }
+  
+        &.active,
+        &:hover {
+          border-right: 3px solid rgba(var(--eC-white-rgb), 0.6);
+          opacity: 1;
+        }
+      }
+      .first-level {
+        display:none;
+      }
+  }
+} // sidebar-draggable
+
+
+.gu-mirror {
+  
+  // Feeds
+  .list-group-item {
+      &.active {
+          background-color: var(--eC-white);
+          color: var(--eC-body-color);
+          border:0;
+      }
+  } 
+}
+
+.drag-item {
+  &.ui-draggable-dragging {
+    width:60px !important;
+    height:60px !important;
+  
+      img {
+        max-width:100%;
+        width:60px;
+        height:60px;
+        box-shadow:0 2px 20px rgba(var(--eC-black-rgb), 0.06);
+      }
+  
+      .overlay,
+      .custom-control {
+        display: none;
+      }
+
+    &.multiple {
+      position: relative;
+      z-index: 1;
+
+      &:before,
+      &:after {
+        content:"";
+        position: absolute;
+        background-color:var(--eC-white);
+        border:1px solid var(--eC-gray-200);
+        border-radius: 5px;
+        box-shadow:0 2px 20px rgba(var(--eC-black-rgb), 0.06);
+      }
+
+      &:before {
+        top:-5px;
+        left:-5px;
+        width:60px;
+        height:60px;
+        z-index: -1;        
+      }
+
+      &:after {
+        top:-10px;
+        left:-10px;
+        width:60px;
+        height:60px;
+        z-index: -2;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,57 @@
+//(Required file)
+@import 'variable';
+
+@import 'ec-root';
+
+@import "bootstrap/bootstrap";
+
+@import 'theme-colors/theme-colors';
+
+@import 'core/ec/ec-dark-theme';
+
+@import 'core/core';
+
+@import 'responsive';
+
+// @import 'icons/fontawesome-pro-5.13.1-web/css/all.css';
+
+// @import 'icons/themify-icons/themify-icons.css';
+
+// @import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+// @import "~nouislider/distribute/nouislider.min.css";
+
+// @import "../../../node_modules/c3/c3.min.css";
+
+// @import '~ngx-toastr/toastr-bs4-alert';
+
+virtual-scroller {
+  // width: 350px;
+  height: 90vh;
+}
+
+.vertical.selfScroll {
+    width:100%;
+    height:50vh;
+}
+
+@media (min-width: 992px) {
+  .virtual-fit-scroll {
+    height: calc(100vh - 220px + 30px) !important;
+    overflow: hidden;
+    margin-bottom: 5px !important;
+  }
+}
+.ql-toolbar.ql-snow {
+  border: none;
+}
+
+.ql-container.ql-snow {
+  border: none;
+}
+
+// my-custom-component {
+//   display: block;
+//   width: 100%;
+//   height: 30px;
+// }
